@@ -36,7 +36,7 @@ Giao diện GUI của dự án được chia làm 3 trang chính:
 
 ## I. Uninformed Search Algorithms
 ### 1. Breadth-First Search
-|Trạng thái bắt đầu|Trạng thái đich|Lời giải|Số bước để tìm ra lời giải|
+|Trạng thái bắt đầu|Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
 | :--- | :--- | :---| :---|
 | ![](https://github.com/user-attachments/assets/0b25e011-e762-43a8-bedf-9fbecfc7cd7d)| ![](https://github.com/user-attachments/assets/05d09562-c4e5-4335-82db-cc6a50bf9c7e)|  |<p>Steps: 23</p>|
 ### 2. dfs – Depth-First Search
