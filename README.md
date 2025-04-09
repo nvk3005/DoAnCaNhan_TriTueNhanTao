@@ -38,7 +38,7 @@ Giao diện GUI của dự án được chia làm 3 trang chính:
 ### 1. Breadth-First Search
 |Trạng thái bắt đầu|Trạng thái đich|Lời giải|Số bước để tìm ra lời giải|
 | :--- | :--- | :---| :---|
-| ![](https://github.com/user-attachments/assets/0b25e011-e762-43a8-bedf-9fbecfc7cd7d)| ![](https://github.com/user-attachments/assets/2964a580-521b-43d3-b1e6-523e79e6b52d) |<p>Steps: 23</p>|
+| ![](https://github.com/user-attachments/assets/0b25e011-e762-43a8-bedf-9fbecfc7cd7d)| ![](https://github.com/user-attachments/assets/05d09562-c4e5-4335-82db-cc6a50bf9c7e)|  |<p>Steps: 23</p>|
 ### 2. dfs – Depth-First Search
 **No Solution**
 ### 3. ucs – Uniform Cost Search
