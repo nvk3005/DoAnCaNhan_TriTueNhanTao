@@ -38,7 +38,7 @@ Giao diện GUI của dự án được chia làm 3 trang chính:
 ### 1. Breadth-First Search
 |Trạng thái bắt đầu|Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
 | :--- | :--- | :---| :---|
-|![](https://github.com/user-attachments/assets/0b25e011-e762-43a8-bedf-9fbecfc7cd7d)|![](https://github.com/user-attachments/assets/05d09562-c4e5-4335-82db-cc6a50bf9c7e)|![Image](https://github.com/user-attachments/assets/7869b6d0-bec2-4eeb-b9cf-07a1a73a0683)|<p>Steps: 23</p>|
+|![](https://github.com/user-attachments/assets/0b25e011-e762-43a8-bedf-9fbecfc7cd7d)|![](https://github.com/user-attachments/assets/05d09562-c4e5-4335-82db-cc6a50bf9c7e)|![Image](https://github.com/user-attachments/assets/0183fb1d-71cc-4646-b4dc-06685e9a9a62)|<p>Steps: 23</p>|
 ### 2. Depth-First Search
 |Trạng thái bắt đầu|Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
 | :--- | :--- | :---| :---|
@@ -46,7 +46,7 @@ Giao diện GUI của dự án được chia làm 3 trang chính:
 ### 3. Uniform Cost Search
 |Trạng thái bắt đầu|Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
 | :--- | :--- | :---| :---|
-|![](https://github.com/user-attachments/assets/0b25e011-e762-43a8-bedf-9fbecfc7cd7d)|![](https://github.com/user-attachments/assets/05d09562-c4e5-4335-82db-cc6a50bf9c7e)|![Image](https://github.com/user-attachments/assets/7869b6d0-bec2-4eeb-b9cf-07a1a73a0683)|<p>Steps: 23</p>|
+|![](https://github.com/user-attachments/assets/0b25e011-e762-43a8-bedf-9fbecfc7cd7d)|![](https://github.com/user-attachments/assets/05d09562-c4e5-4335-82db-cc6a50bf9c7e)| ![Image](https://github.com/user-attachments/assets/d12d7a32-6188-437f-98a7-a17ce4d53a18)|<p>Steps: 23</p>|
 ### 4. ids – Iterative Deepening Search
 |Các trạng thái|Hiệu suất thuật toán|
 | :--- | :--- |
