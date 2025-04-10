@@ -17,7 +17,7 @@ Giao diện GUI của dự án được chia làm 3 trang chính:
 - Trang Steps: Hiển thị chi tiết từng bước tìm ra lời giải của thuật toán
 
 ## Cách để chạy dự án.
-- clone từ github: git clone [DoAnCaNhan_TriTueNhanTao](https://github.com/nvk3005/DoAnCaNhan_TriTueNhanTao.git)
+- clone từ github: git clone https://github.com/nvk3005/DoAnCaNhan_TriTueNhanTao.git
 - Chạy file Main.py trong thư mục
 ## Các thuật toán được sử dụng trong dự án
 
