@@ -16,6 +16,9 @@ Giao diện GUI của dự án được chia làm 3 trang chính:
 - Trang Result: Cho phép người dùng chọn thuật toán muốn áp dụng để tìm ra lời giải cho bài toán
 - Trang Steps: Hiển thị chi tiết từng bước tìm ra lời giải của thuật toán
 
+## Cách để chạy dự án.
+- clone từ github: git clone 
+- Chạy file Main.py trong thư mục
 ## Các thuật toán được sử dụng trong dự án
 
 - [I. Uninformed Search Algorithms](#i-uninformed-search-algorithms)
