@@ -47,25 +47,36 @@ Giao diện GUI của dự án được chia làm 3 trang chính:
 |Trạng thái bắt đầu|Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
 | :--- | :--- | :---| :---|
 |![](https://github.com/user-attachments/assets/0b25e011-e762-43a8-bedf-9fbecfc7cd7d)|![](https://github.com/user-attachments/assets/05d09562-c4e5-4335-82db-cc6a50bf9c7e)| ![Image](https://github.com/user-attachments/assets/d12d7a32-6188-437f-98a7-a17ce4d53a18)|<p>Steps: 23</p>|
-### 4. ids – Iterative Deepening Search
-|Các trạng thái|Hiệu suất thuật toán|
-| :--- | :--- |
-| ![](https://github.com/user-attachments/assets/b788ce8e-82a2-43ce-a537-f029e27a5c95)|<p>Time: 0.24040450004395097s</p><p>Steps: 27</p>|
+### 4. Iterative Deepening Search
+|Trạng thái bắt đầu|Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
+| :--- | :--- | :---| :---|
+|![](https://github.com/user-attachments/assets/0b25e011-e762-43a8-bedf-9fbecfc7cd7d)|![](https://github.com/user-attachments/assets/05d09562-c4e5-4335-82db-cc6a50bf9c7e)| ![Image](https://github.com/user-attachments/assets/6ca85878-596b-4800-85c1-4cdbd5f15ea3)|<p>Steps: 27</p>|
 
 ## II. Informed Search Algorithms
-### 1. aStar – A* Search
-|Các trạng thái|Hiệu suất thuật toán|
-| :--- | :--- |
-| ![](https://github.com/user-attachments/assets/03236232-9ebb-49a4-8b00-a4885c027a4a)|<p>Time: 0.010279600042849779s</p><p>Steps: 23</p>|
-### 2. greedy – Greedy Best-First Search
-|Các trạng thái|Hiệu suất thuật toán|
-| :--- | :--- |
-| ![](https://github.com/user-attachments/assets/16e8b254-43bf-45d4-972b-c76981cf251b)|<p>Time: 0.005781499901786447s</p><p>Steps: 79</p>
-### 3. idaStar – Iterative Deepening A*
-
+### 1. A* Search
+|Trạng thái bắt đầu|Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
+| :--- | :--- | :---| :---|
+|![](https://github.com/user-attachments/assets/0b25e011-e762-43a8-bedf-9fbecfc7cd7d)|![](https://github.com/user-attachments/assets/05d09562-c4e5-4335-82db-cc6a50bf9c7e)| ![Image](https://github.com/user-attachments/assets/dea3f349-9bca-45a0-8c83-381b536dc882)|<p>Steps: 23</p>|
+### 2. Greedy Best-First Search
+|Trạng thái bắt đầu|Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
+| :--- | :--- | :---| :---|
+|![](https://github.com/user-attachments/assets/0b25e011-e762-43a8-bedf-9fbecfc7cd7d)|![](https://github.com/user-attachments/assets/05d09562-c4e5-4335-82db-cc6a50bf9c7e)|  ![Image](https://github.com/user-attachments/assets/784de3a7-df51-49c5-8bb9-bdc00887e268)|<p>Steps: 53</p>|
+### 3. Iterative Deepening A*
+| :--- | :--- | :---| :---|
+|![](https://github.com/user-attachments/assets/0b25e011-e762-43a8-bedf-9fbecfc7cd7d)|![](https://github.com/user-attachments/assets/05d09562-c4e5-4335-82db-cc6a50bf9c7e)|  ![Image](https://github.com/user-attachments/assets/5179e356-fbc4-4e0b-9101-79f52306a621)|<p>Steps: 23</p>|
 ## III. Local Search Algorithms
-### 1. SHC – Simple Hill Climbing
-### 2. SAHC – Steepest Ascent Hill Climbing
-### 3. StochasticHC – Stochastic Hill Climbing
-### 4. SimAnn – SimulatedAnnealing
-### 5. BeamSearch – Beam Search
+### 1. Simple Hill Climbing
+| :--- | :--- | :---| :---|
+|![](https://github.com/user-attachments/assets/0b25e011-e762-43a8-bedf-9fbecfc7cd7d)|![](https://github.com/user-attachments/assets/05d09562-c4e5-4335-82db-cc6a50bf9c7e)|  Không tìm thấy lời giải|<p>Steps: 0</p>|
+### 2. Steepest Ascent Hill Climbing
+| :--- | :--- | :---| :---|
+|![](https://github.com/user-attachments/assets/0b25e011-e762-43a8-bedf-9fbecfc7cd7d)|![](https://github.com/user-attachments/assets/05d09562-c4e5-4335-82db-cc6a50bf9c7e)|  Không tìm thấy lời giải|<p>Steps: 0</p>
+### 3. Stochastic Hill Climbing
+| :--- | :--- | :---| :---|
+|![](https://github.com/user-attachments/assets/0b25e011-e762-43a8-bedf-9fbecfc7cd7d)|![](https://github.com/user-attachments/assets/05d09562-c4e5-4335-82db-cc6a50bf9c7e)|  Không tìm thấy lời giải|<p>Steps: 0</p>
+### 4. SimulatedAnnealing
+| :--- | :--- | :---| :---|
+|![](https://github.com/user-attachments/assets/0b25e011-e762-43a8-bedf-9fbecfc7cd7d)|![](https://github.com/user-attachments/assets/05d09562-c4e5-4335-82db-cc6a50bf9c7e)|  Không tìm thấy lời giải|<p>Steps: 0</p>
+### 5. Beam Search
+| :--- | :--- | :---| :---|
+|![](https://github.com/user-attachments/assets/0b25e011-e762-43a8-bedf-9fbecfc7cd7d)|![](https://github.com/user-attachments/assets/05d09562-c4e5-4335-82db-cc6a50bf9c7e)|  ![Image](https://github.com/user-attachments/assets/77a29fc2-1ae0-4886-9782-e9295ca6cac3)|<p>Steps: 43</p>
