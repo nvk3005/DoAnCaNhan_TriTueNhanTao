@@ -39,12 +39,14 @@ Giao diện GUI của dự án được chia làm 3 trang chính:
 |Trạng thái bắt đầu|Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
 | :--- | :--- | :---| :---|
 |![](https://github.com/user-attachments/assets/0b25e011-e762-43a8-bedf-9fbecfc7cd7d)|![](https://github.com/user-attachments/assets/05d09562-c4e5-4335-82db-cc6a50bf9c7e)|![Image](https://github.com/user-attachments/assets/7869b6d0-bec2-4eeb-b9cf-07a1a73a0683)|<p>Steps: 23</p>|
-### 2. dfs – Depth-First Search
-**No Solution**
-### 3. ucs – Uniform Cost Search
-|Các trạng thái|Hiệu suất thuật toán|
-| :--- | :--- |
-| ![](https://github.com/user-attachments/assets/b7a98cda-93bb-4bfe-a3c0-a370a19e980d) |<p>Time: 0.33811870007775724s</p><p>Steps: 23</p>|
+### 2. Depth-First Search
+|Trạng thái bắt đầu|Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
+| :--- | :--- | :---| :---|
+|![](https://github.com/user-attachments/assets/0b25e011-e762-43a8-bedf-9fbecfc7cd7d)|![](https://github.com/user-attachments/assets/05d09562-c4e5-4335-82db-cc6a50bf9c7e)||<p>Steps: 66041</p>|
+### 3. Uniform Cost Search
+|Trạng thái bắt đầu|Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
+| :--- | :--- | :---| :---|
+|![](https://github.com/user-attachments/assets/0b25e011-e762-43a8-bedf-9fbecfc7cd7d)|![](https://github.com/user-attachments/assets/05d09562-c4e5-4335-82db-cc6a50bf9c7e)|![Image](https://github.com/user-attachments/assets/7869b6d0-bec2-4eeb-b9cf-07a1a73a0683)|<p>Steps: 23</p>|
 ### 4. ids – Iterative Deepening Search
 |Các trạng thái|Hiệu suất thuật toán|
 | :--- | :--- |
