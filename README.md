@@ -62,21 +62,27 @@ Giao diện GUI của dự án được chia làm 3 trang chính:
 | :--- | :--- | :---| :---|
 |![](https://github.com/user-attachments/assets/0b25e011-e762-43a8-bedf-9fbecfc7cd7d)|![](https://github.com/user-attachments/assets/05d09562-c4e5-4335-82db-cc6a50bf9c7e)|  ![Image](https://github.com/user-attachments/assets/784de3a7-df51-49c5-8bb9-bdc00887e268)|<p>Steps: 53</p>|
 ### 3. Iterative Deepening A*
+|Trạng thái bắt đầu|Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
 | :--- | :--- | :---| :---|
 |![](https://github.com/user-attachments/assets/0b25e011-e762-43a8-bedf-9fbecfc7cd7d)|![](https://github.com/user-attachments/assets/05d09562-c4e5-4335-82db-cc6a50bf9c7e)|  ![Image](https://github.com/user-attachments/assets/5179e356-fbc4-4e0b-9101-79f52306a621)|<p>Steps: 23</p>|
 ## III. Local Search Algorithms
 ### 1. Simple Hill Climbing
+|Trạng thái bắt đầu|Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
 | :--- | :--- | :---| :---|
 |![](https://github.com/user-attachments/assets/0b25e011-e762-43a8-bedf-9fbecfc7cd7d)|![](https://github.com/user-attachments/assets/05d09562-c4e5-4335-82db-cc6a50bf9c7e)|  Không tìm thấy lời giải|<p>Steps: 0</p>|
 ### 2. Steepest Ascent Hill Climbing
+|Trạng thái bắt đầu|Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
 | :--- | :--- | :---| :---|
 |![](https://github.com/user-attachments/assets/0b25e011-e762-43a8-bedf-9fbecfc7cd7d)|![](https://github.com/user-attachments/assets/05d09562-c4e5-4335-82db-cc6a50bf9c7e)|  Không tìm thấy lời giải|<p>Steps: 0</p>
 ### 3. Stochastic Hill Climbing
+|Trạng thái bắt đầu|Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
 | :--- | :--- | :---| :---|
 |![](https://github.com/user-attachments/assets/0b25e011-e762-43a8-bedf-9fbecfc7cd7d)|![](https://github.com/user-attachments/assets/05d09562-c4e5-4335-82db-cc6a50bf9c7e)|  Không tìm thấy lời giải|<p>Steps: 0</p>
 ### 4. SimulatedAnnealing
+|Trạng thái bắt đầu|Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
 | :--- | :--- | :---| :---|
 |![](https://github.com/user-attachments/assets/0b25e011-e762-43a8-bedf-9fbecfc7cd7d)|![](https://github.com/user-attachments/assets/05d09562-c4e5-4335-82db-cc6a50bf9c7e)|  Không tìm thấy lời giải|<p>Steps: 0</p>
 ### 5. Beam Search
+|Trạng thái bắt đầu|Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
 | :--- | :--- | :---| :---|
 |![](https://github.com/user-attachments/assets/0b25e011-e762-43a8-bedf-9fbecfc7cd7d)|![](https://github.com/user-attachments/assets/05d09562-c4e5-4335-82db-cc6a50bf9c7e)|  ![Image](https://github.com/user-attachments/assets/77a29fc2-1ae0-4886-9782-e9295ca6cac3)|<p>Steps: 43</p>
