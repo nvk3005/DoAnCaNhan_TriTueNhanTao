@@ -40,6 +40,8 @@ Giao diện GUI của dự án được chia làm 3 trang chính:
   - [5. Beam Search](#5-beam-search)
 
 ## I. Uninformed Search Algorithms
+### Các thành phần chính của bài toán tìm kiếm
+
 ### 1. Breadth-First Search
 |Trạng thái bắt đầu|Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
 | :--- | :--- | :---| :---|
