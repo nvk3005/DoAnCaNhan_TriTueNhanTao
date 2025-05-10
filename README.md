@@ -77,12 +77,20 @@ Giao diện GUI của dự án được chia làm 3 trang chính:
 |![Image](https://github.com/user-attachments/assets/5bfa0d34-62fb-4861-8904-b045dc3567dc)|![Image](https://github.com/user-attachments/assets/1c6a6b4e-a560-46e6-9a5d-f7e39f9a2e73)|<p>Steps: 23</p>|
 ## III. Local Search Algorithms
 ### 1. Simple Hill Climbing
-
+|Trạng thái bắt đầu và Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
+| :--- | :---| :---|
+|![Image](https://github.com/user-attachments/assets/5bfa0d34-62fb-4861-8904-b045dc3567dc)|![Image](https://github.com/user-attachments/assets/6a47e5ed-52c7-4264-b198-463ce933b627)|<p>Steps: 0</p>|
 ### 2. Steepest Ascent Hill Climbing
-
+|Trạng thái bắt đầu và Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
+| :--- | :---| :---|
+|![Image](https://github.com/user-attachments/assets/5bfa0d34-62fb-4861-8904-b045dc3567dc)|![Image](https://github.com/user-attachments/assets/c4e8a933-4779-4ab3-a035-a44c5cc2a035)|<p>Steps: 0</p>|
 ### 3. Stochastic Hill Climbing
-
+|Trạng thái bắt đầu và Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
+| :--- | :---| :---|
+|![Image](https://github.com/user-attachments/assets/5bfa0d34-62fb-4861-8904-b045dc3567dc)|![Image](https://github.com/user-attachments/assets/fa2f028f-7a6a-4beb-a4a7-7c1913d4a94f)|<p>Steps: 0</p>|
 ### 4. SimulatedAnnealing
-
+|Trạng thái bắt đầu và Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
+| :--- | :---| :---|
+|![Image](https://github.com/user-attachments/assets/5bfa0d34-62fb-4861-8904-b045dc3567dc)|![Image](https://github.com/user-attachments/assets/505f250c-5249-47aa-af78-072def09f637)|<p>Steps: 0</p>|
 ### 5. Beam Search
 
