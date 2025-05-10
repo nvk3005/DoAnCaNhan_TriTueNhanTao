@@ -1,6 +1,8 @@
-from Input import INPUT
-from Result import RESULT
-from Steps import STEPS
+
+from GUI.Input import INPUT
+from GUI.Result import RESULT
+from GUI.Steps import STEPS
+from GUI.Search import SEARCH
 
 from PyQt5.QtWidgets import QApplication
 
@@ -12,9 +14,14 @@ class UI():
 
         self.result = RESULT()
         self.result.btn_Result.clicked.connect(self.Detailed_Steps)
+        self.result.btn_Pos.clicked.connect(lambda: self.Search_Page("Pos"))
+        self.result.btn_Nos.clicked.connect(lambda: self.Search_Page("Nos"))
 
         self.steps = STEPS()
         self.steps.btn_Complete.clicked.connect(self.Result_Page)
+
+        self.search = SEARCH()
+        self.search.btnComplete.clicked.connect(self.Result_Page)
 
     def Load_Data(self):
         self.result.start_state = [
@@ -44,7 +51,16 @@ class UI():
 
     def Result_Page(self):
         self.steps.hide()
+        self.search.hide()
         self.result.show()
+
+    def Search_Page(self, algorithm):
+        self.result.hide()
+        self.search.show()
+        if algorithm == "Nos":
+            self.search.Nos()
+        else:
+            self.search.Pos()
 
 
 if __name__ == "__main__":

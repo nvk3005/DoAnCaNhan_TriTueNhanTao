@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Frame(object):
     def setupUi(self, Frame):
         Frame.setObjectName("Frame")
-        Frame.resize(1187, 848)
+        Frame.resize(1187, 946)
         font = QtGui.QFont()
         font.setPointSize(14)
         font.setBold(False)
@@ -22,7 +22,7 @@ class Ui_Frame(object):
         Frame.setFont(font)
         Frame.setStyleSheet("")
         self.gridLayoutWidget = QtWidgets.QWidget(Frame)
-        self.gridLayoutWidget.setGeometry(QtCore.QRect(330, 150, 511, 391))
+        self.gridLayoutWidget.setGeometry(QtCore.QRect(340, 80, 511, 420))
         self.gridLayoutWidget.setObjectName("gridLayoutWidget")
         self.gridLayout = QtWidgets.QGridLayout(self.gridLayoutWidget)
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
@@ -41,7 +41,7 @@ class Ui_Frame(object):
         self.cur_20.setTextFormat(QtCore.Qt.PlainText)
         self.cur_20.setAlignment(QtCore.Qt.AlignCenter)
         self.cur_20.setObjectName("cur_20")
-        self.gridLayout.addWidget(self.cur_20, 2, 0, 1, 1)
+        self.gridLayout.addWidget(self.cur_20, 3, 0, 1, 1)
         self.cur_21 = QtWidgets.QLabel(self.gridLayoutWidget)
         font = QtGui.QFont()
         font.setPointSize(18)
@@ -56,7 +56,7 @@ class Ui_Frame(object):
         self.cur_21.setTextFormat(QtCore.Qt.PlainText)
         self.cur_21.setAlignment(QtCore.Qt.AlignCenter)
         self.cur_21.setObjectName("cur_21")
-        self.gridLayout.addWidget(self.cur_21, 2, 1, 1, 1)
+        self.gridLayout.addWidget(self.cur_21, 3, 1, 1, 1)
         self.cur_12 = QtWidgets.QLabel(self.gridLayoutWidget)
         font = QtGui.QFont()
         font.setPointSize(18)
@@ -71,7 +71,7 @@ class Ui_Frame(object):
         self.cur_12.setTextFormat(QtCore.Qt.PlainText)
         self.cur_12.setAlignment(QtCore.Qt.AlignCenter)
         self.cur_12.setObjectName("cur_12")
-        self.gridLayout.addWidget(self.cur_12, 1, 2, 1, 1)
+        self.gridLayout.addWidget(self.cur_12, 2, 2, 1, 1)
         self.cur_00 = QtWidgets.QLabel(self.gridLayoutWidget)
         font = QtGui.QFont()
         font.setPointSize(18)
@@ -87,21 +87,6 @@ class Ui_Frame(object):
         self.cur_00.setAlignment(QtCore.Qt.AlignCenter)
         self.cur_00.setObjectName("cur_00")
         self.gridLayout.addWidget(self.cur_00, 0, 0, 1, 1)
-        self.cur_10 = QtWidgets.QLabel(self.gridLayoutWidget)
-        font = QtGui.QFont()
-        font.setPointSize(18)
-        font.setBold(True)
-        font.setWeight(75)
-        self.cur_10.setFont(font)
-        self.cur_10.setStyleSheet("QLabel {\n"
-"    border: 2px solid black; /* Viền đen 2px */\n"
-"}\n"
-"")
-        self.cur_10.setText("")
-        self.cur_10.setTextFormat(QtCore.Qt.PlainText)
-        self.cur_10.setAlignment(QtCore.Qt.AlignCenter)
-        self.cur_10.setObjectName("cur_10")
-        self.gridLayout.addWidget(self.cur_10, 1, 0, 1, 1)
         self.cur_11 = QtWidgets.QLabel(self.gridLayoutWidget)
         font = QtGui.QFont()
         font.setPointSize(18)
@@ -116,7 +101,7 @@ class Ui_Frame(object):
         self.cur_11.setTextFormat(QtCore.Qt.PlainText)
         self.cur_11.setAlignment(QtCore.Qt.AlignCenter)
         self.cur_11.setObjectName("cur_11")
-        self.gridLayout.addWidget(self.cur_11, 1, 1, 1, 1)
+        self.gridLayout.addWidget(self.cur_11, 2, 1, 1, 1)
         self.cur_01 = QtWidgets.QLabel(self.gridLayoutWidget)
         font = QtGui.QFont()
         font.setPointSize(18)
@@ -132,6 +117,21 @@ class Ui_Frame(object):
         self.cur_01.setAlignment(QtCore.Qt.AlignCenter)
         self.cur_01.setObjectName("cur_01")
         self.gridLayout.addWidget(self.cur_01, 0, 1, 1, 1)
+        self.cur_10 = QtWidgets.QLabel(self.gridLayoutWidget)
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
+        self.cur_10.setFont(font)
+        self.cur_10.setStyleSheet("QLabel {\n"
+"    border: 2px solid black; /* Viền đen 2px */\n"
+"}\n"
+"")
+        self.cur_10.setText("")
+        self.cur_10.setTextFormat(QtCore.Qt.PlainText)
+        self.cur_10.setAlignment(QtCore.Qt.AlignCenter)
+        self.cur_10.setObjectName("cur_10")
+        self.gridLayout.addWidget(self.cur_10, 2, 0, 1, 1)
         self.cur_02 = QtWidgets.QLabel(self.gridLayoutWidget)
         font = QtGui.QFont()
         font.setPointSize(18)
@@ -161,9 +161,9 @@ class Ui_Frame(object):
         self.cur_22.setTextFormat(QtCore.Qt.PlainText)
         self.cur_22.setAlignment(QtCore.Qt.AlignCenter)
         self.cur_22.setObjectName("cur_22")
-        self.gridLayout.addWidget(self.cur_22, 2, 2, 1, 1)
+        self.gridLayout.addWidget(self.cur_22, 3, 2, 1, 1)
         self.label_10 = QtWidgets.QLabel(Frame)
-        self.label_10.setGeometry(QtCore.QRect(530, 560, 81, 41))
+        self.label_10.setGeometry(QtCore.QRect(550, 530, 81, 41))
         font = QtGui.QFont()
         font.setPointSize(14)
         font.setBold(True)
@@ -171,7 +171,7 @@ class Ui_Frame(object):
         self.label_10.setFont(font)
         self.label_10.setObjectName("label_10")
         self.lbl_Step = QtWidgets.QLabel(Frame)
-        self.lbl_Step.setGeometry(QtCore.QRect(620, 560, 81, 41))
+        self.lbl_Step.setGeometry(QtCore.QRect(640, 530, 81, 41))
         font = QtGui.QFont()
         font.setPointSize(14)
         font.setBold(True)
@@ -179,7 +179,7 @@ class Ui_Frame(object):
         self.lbl_Step.setFont(font)
         self.lbl_Step.setObjectName("lbl_Step")
         self.btn_Result = QtWidgets.QPushButton(Frame)
-        self.btn_Result.setGeometry(QtCore.QRect(390, 610, 391, 51))
+        self.btn_Result.setGeometry(QtCore.QRect(400, 620, 391, 51))
         self.btn_Result.setStyleSheet("QPushButton#btn_Result {\n"
 "    background-color: #4CAF50;  /* Màu nền xanh lá */\n"
 "    color: white;               /* Màu chữ trắng */\n"
@@ -203,7 +203,7 @@ class Ui_Frame(object):
 "")
         self.btn_Result.setObjectName("btn_Result")
         self.btn_Reset = QtWidgets.QPushButton(Frame)
-        self.btn_Reset.setGeometry(QtCore.QRect(390, 750, 391, 51))
+        self.btn_Reset.setGeometry(QtCore.QRect(400, 760, 391, 51))
         self.btn_Reset.setStyleSheet("QPushButton#btn_Reset {\n"
 "    background-color: #4CAF50;  /* Màu nền xanh lá */\n"
 "    color: white;               /* Màu chữ trắng */\n"
@@ -227,7 +227,7 @@ class Ui_Frame(object):
 "")
         self.btn_Reset.setObjectName("btn_Reset")
         self.btn_Compare = QtWidgets.QPushButton(Frame)
-        self.btn_Compare.setGeometry(QtCore.QRect(390, 680, 391, 51))
+        self.btn_Compare.setGeometry(QtCore.QRect(400, 690, 391, 51))
         self.btn_Compare.setStyleSheet("QPushButton#btn_Compare {\n"
 "    background-color: #4CAF50;  /* Màu nền xanh lá */\n"
 "    color: white;               /* Màu chữ trắng */\n"
@@ -251,7 +251,7 @@ class Ui_Frame(object):
 "")
         self.btn_Compare.setObjectName("btn_Compare")
         self.groupBox = QtWidgets.QGroupBox(Frame)
-        self.groupBox.setGeometry(QtCore.QRect(40, 30, 241, 251))
+        self.groupBox.setGeometry(QtCore.QRect(20, 10, 241, 361))
         font = QtGui.QFont()
         font.setFamily("Segoe UI")
         font.setPointSize(9)
@@ -281,7 +281,7 @@ class Ui_Frame(object):
 "")
         self.groupBox.setObjectName("groupBox")
         self.verticalLayoutWidget = QtWidgets.QWidget(self.groupBox)
-        self.verticalLayoutWidget.setGeometry(QtCore.QRect(0, 40, 241, 201))
+        self.verticalLayoutWidget.setGeometry(QtCore.QRect(0, 40, 241, 301))
         self.verticalLayoutWidget.setObjectName("verticalLayoutWidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.verticalLayoutWidget)
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
@@ -387,7 +387,7 @@ class Ui_Frame(object):
         self.btn_Ids.setObjectName("btn_Ids")
         self.verticalLayout.addWidget(self.btn_Ids)
         self.groupBox_2 = QtWidgets.QGroupBox(Frame)
-        self.groupBox_2.setGeometry(QtCore.QRect(40, 330, 241, 211))
+        self.groupBox_2.setGeometry(QtCore.QRect(20, 420, 241, 231))
         font = QtGui.QFont()
         font.setFamily("Segoe UI")
         font.setPointSize(9)
@@ -417,7 +417,7 @@ class Ui_Frame(object):
 "")
         self.groupBox_2.setObjectName("groupBox_2")
         self.verticalLayoutWidget_2 = QtWidgets.QWidget(self.groupBox_2)
-        self.verticalLayoutWidget_2.setGeometry(QtCore.QRect(0, 30, 241, 171))
+        self.verticalLayoutWidget_2.setGeometry(QtCore.QRect(0, 50, 241, 171))
         self.verticalLayoutWidget_2.setObjectName("verticalLayoutWidget_2")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.verticalLayoutWidget_2)
         self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
@@ -498,7 +498,7 @@ class Ui_Frame(object):
         self.btn_IdaStar.setObjectName("btn_IdaStar")
         self.verticalLayout_2.addWidget(self.btn_IdaStar)
         self.groupBox_4 = QtWidgets.QGroupBox(Frame)
-        self.groupBox_4.setGeometry(QtCore.QRect(890, 30, 241, 301))
+        self.groupBox_4.setGeometry(QtCore.QRect(930, 10, 241, 361))
         font = QtGui.QFont()
         font.setFamily("Segoe UI")
         font.setPointSize(9)
@@ -528,7 +528,7 @@ class Ui_Frame(object):
 "")
         self.groupBox_4.setObjectName("groupBox_4")
         self.verticalLayoutWidget_4 = QtWidgets.QWidget(self.groupBox_4)
-        self.verticalLayoutWidget_4.setGeometry(QtCore.QRect(0, 30, 241, 261))
+        self.verticalLayoutWidget_4.setGeometry(QtCore.QRect(0, 40, 241, 311))
         self.verticalLayoutWidget_4.setObjectName("verticalLayoutWidget_4")
         self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.verticalLayoutWidget_4)
         self.verticalLayout_4.setContentsMargins(0, 0, 0, 0)
@@ -583,31 +583,6 @@ class Ui_Frame(object):
 "")
         self.btn_Sahc.setObjectName("btn_Sahc")
         self.verticalLayout_4.addWidget(self.btn_Sahc)
-        self.btn_StochchaticHC = QtWidgets.QPushButton(self.verticalLayoutWidget_4)
-        font = QtGui.QFont()
-        font.setPointSize(-1)
-        self.btn_StochchaticHC.setFont(font)
-        self.btn_StochchaticHC.setStyleSheet("QPushButton {\n"
-"    background-color: #4CAF50;  /* Màu nền xanh lá */\n"
-"    color: white;               /* Màu chữ trắng */\n"
-"    border-radius: 10px;        /* Bo góc */\n"
-"    font-size: 20px;\n"
-"    padding: 8px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background-color: white;    /* Khi hover, đổi nền thành trắng */\n"
-"    color: #4CAF50;            /* Chữ đổi thành màu xanh lá */\n"
-"    border: 2px solid #4CAF50; /* Viền xanh lá để nổi bật */\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"    background-color: #367c39; /* Màu nền khi nhấn */\n"
-"    color: white;\n"
-"}\n"
-"")
-        self.btn_StochchaticHC.setObjectName("btn_StochchaticHC")
-        self.verticalLayout_4.addWidget(self.btn_StochchaticHC)
         self.btn_Sa = QtWidgets.QPushButton(self.verticalLayoutWidget_4)
         font = QtGui.QFont()
         font.setPointSize(-1)
@@ -633,6 +608,31 @@ class Ui_Frame(object):
 "")
         self.btn_Sa.setObjectName("btn_Sa")
         self.verticalLayout_4.addWidget(self.btn_Sa)
+        self.btn_StochchaticHC = QtWidgets.QPushButton(self.verticalLayoutWidget_4)
+        font = QtGui.QFont()
+        font.setPointSize(-1)
+        self.btn_StochchaticHC.setFont(font)
+        self.btn_StochchaticHC.setStyleSheet("QPushButton {\n"
+"    background-color: #4CAF50;  /* Màu nền xanh lá */\n"
+"    color: white;               /* Màu chữ trắng */\n"
+"    border-radius: 10px;        /* Bo góc */\n"
+"    font-size: 20px;\n"
+"    padding: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: white;    /* Khi hover, đổi nền thành trắng */\n"
+"    color: #4CAF50;            /* Chữ đổi thành màu xanh lá */\n"
+"    border: 2px solid #4CAF50; /* Viền xanh lá để nổi bật */\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #367c39; /* Màu nền khi nhấn */\n"
+"    color: white;\n"
+"}\n"
+"")
+        self.btn_StochchaticHC.setObjectName("btn_StochchaticHC")
+        self.verticalLayout_4.addWidget(self.btn_StochchaticHC)
         self.btn_Bs = QtWidgets.QPushButton(self.verticalLayoutWidget_4)
         font = QtGui.QFont()
         font.setPointSize(-1)
@@ -658,6 +658,314 @@ class Ui_Frame(object):
 "")
         self.btn_Bs.setObjectName("btn_Bs")
         self.verticalLayout_4.addWidget(self.btn_Bs)
+        self.btn_Ga = QtWidgets.QPushButton(self.verticalLayoutWidget_4)
+        font = QtGui.QFont()
+        font.setPointSize(-1)
+        self.btn_Ga.setFont(font)
+        self.btn_Ga.setStyleSheet("QPushButton {\n"
+"    background-color: #4CAF50;  /* Màu nền xanh lá */\n"
+"    color: white;               /* Màu chữ trắng */\n"
+"    border-radius: 10px;        /* Bo góc */\n"
+"    font-size: 20px;\n"
+"    padding: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: white;    /* Khi hover, đổi nền thành trắng */\n"
+"    color: #4CAF50;            /* Chữ đổi thành màu xanh lá */\n"
+"    border: 2px solid #4CAF50; /* Viền xanh lá để nổi bật */\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #367c39; /* Màu nền khi nhấn */\n"
+"    color: white;\n"
+"}\n"
+"")
+        self.btn_Ga.setObjectName("btn_Ga")
+        self.verticalLayout_4.addWidget(self.btn_Ga)
+        self.groupBox_3 = QtWidgets.QGroupBox(Frame)
+        self.groupBox_3.setGeometry(QtCore.QRect(930, 420, 241, 231))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        font.setPointSize(9)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.groupBox_3.setFont(font)
+        self.groupBox_3.setStyleSheet("QGroupBox {\n"
+"    border: 2px solid #4CAF50;\n"
+"    border-radius: 10px;\n"
+"    margin-top: 20px;\n"
+"    background-color: #f9f9f9;\n"
+"    padding: 10px;\n"
+"    font: 9pt \"Segoe UI\";  /* Giữ font chữ cỡ 9 */\n"
+"    color: #333;\n"
+"}\n"
+"\n"
+"QGroupBox::title {\n"
+"    subcontrol-origin: margin;\n"
+"    subcontrol-position: top center;\n"
+"    background-color: #4CAF50;\n"
+"    color: white;\n"
+"    padding: 3px 10px;\n"
+"    border-radius: 5px;\n"
+"    font: bold 9pt \"Segoe UI\"; /* Tiêu đề cũng font 9 */\n"
+"}\n"
+"")
+        self.groupBox_3.setObjectName("groupBox_3")
+        self.verticalLayoutWidget_3 = QtWidgets.QWidget(self.groupBox_3)
+        self.verticalLayoutWidget_3.setGeometry(QtCore.QRect(0, 50, 241, 171))
+        self.verticalLayoutWidget_3.setObjectName("verticalLayoutWidget_3")
+        self.verticalLayout_5 = QtWidgets.QVBoxLayout(self.verticalLayoutWidget_3)
+        self.verticalLayout_5.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_5.setObjectName("verticalLayout_5")
+        self.btn_AoStar = QtWidgets.QPushButton(self.verticalLayoutWidget_3)
+        font = QtGui.QFont()
+        font.setPointSize(-1)
+        self.btn_AoStar.setFont(font)
+        self.btn_AoStar.setStyleSheet("QPushButton {\n"
+"    background-color: #4CAF50;  /* Màu nền xanh lá */\n"
+"    color: white;               /* Màu chữ trắng */\n"
+"    border-radius: 10px;        /* Bo góc */\n"
+"    font-size: 20px;\n"
+"    padding: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: white;    /* Khi hover, đổi nền thành trắng */\n"
+"    color: #4CAF50;            /* Chữ đổi thành màu xanh lá */\n"
+"    border: 2px solid #4CAF50; /* Viền xanh lá để nổi bật */\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #367c39; /* Màu nền khi nhấn */\n"
+"    color: white;\n"
+"}\n"
+"")
+        self.btn_AoStar.setObjectName("btn_AoStar")
+        self.verticalLayout_5.addWidget(self.btn_AoStar)
+        self.btn_Nos = QtWidgets.QPushButton(self.verticalLayoutWidget_3)
+        font = QtGui.QFont()
+        font.setPointSize(-1)
+        self.btn_Nos.setFont(font)
+        self.btn_Nos.setStyleSheet("QPushButton {\n"
+"    background-color: #4CAF50;  /* Màu nền xanh lá */\n"
+"    color: white;               /* Màu chữ trắng */\n"
+"    border-radius: 10px;        /* Bo góc */\n"
+"    font-size: 20px;\n"
+"    padding: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: white;    /* Khi hover, đổi nền thành trắng */\n"
+"    color: #4CAF50;            /* Chữ đổi thành màu xanh lá */\n"
+"    border: 2px solid #4CAF50; /* Viền xanh lá để nổi bật */\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #367c39; /* Màu nền khi nhấn */\n"
+"    color: white;\n"
+"}\n"
+"")
+        self.btn_Nos.setObjectName("btn_Nos")
+        self.verticalLayout_5.addWidget(self.btn_Nos)
+        self.btn_Pos = QtWidgets.QPushButton(self.verticalLayoutWidget_3)
+        font = QtGui.QFont()
+        font.setPointSize(-1)
+        self.btn_Pos.setFont(font)
+        self.btn_Pos.setStyleSheet("QPushButton {\n"
+"    background-color: #4CAF50;  /* Màu nền xanh lá */\n"
+"    color: white;               /* Màu chữ trắng */\n"
+"    border-radius: 10px;        /* Bo góc */\n"
+"    font-size: 20px;\n"
+"    padding: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: white;    /* Khi hover, đổi nền thành trắng */\n"
+"    color: #4CAF50;            /* Chữ đổi thành màu xanh lá */\n"
+"    border: 2px solid #4CAF50; /* Viền xanh lá để nổi bật */\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #367c39; /* Màu nền khi nhấn */\n"
+"    color: white;\n"
+"}\n"
+"")
+        self.btn_Pos.setObjectName("btn_Pos")
+        self.verticalLayout_5.addWidget(self.btn_Pos)
+        self.groupBox_5 = QtWidgets.QGroupBox(Frame)
+        self.groupBox_5.setGeometry(QtCore.QRect(20, 690, 241, 231))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        font.setPointSize(9)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.groupBox_5.setFont(font)
+        self.groupBox_5.setStyleSheet("QGroupBox {\n"
+"    border: 2px solid #4CAF50;\n"
+"    border-radius: 10px;\n"
+"    margin-top: 20px;\n"
+"    background-color: #f9f9f9;\n"
+"    padding: 10px;\n"
+"    font: 9pt \"Segoe UI\";  /* Giữ font chữ cỡ 9 */\n"
+"    color: #333;\n"
+"}\n"
+"\n"
+"QGroupBox::title {\n"
+"    subcontrol-origin: margin;\n"
+"    subcontrol-position: top center;\n"
+"    background-color: #4CAF50;\n"
+"    color: white;\n"
+"    padding: 3px 10px;\n"
+"    border-radius: 5px;\n"
+"    font: bold 9pt \"Segoe UI\"; /* Tiêu đề cũng font 9 */\n"
+"}\n"
+"")
+        self.groupBox_5.setObjectName("groupBox_5")
+        self.verticalLayoutWidget_5 = QtWidgets.QWidget(self.groupBox_5)
+        self.verticalLayoutWidget_5.setGeometry(QtCore.QRect(0, 50, 241, 171))
+        self.verticalLayoutWidget_5.setObjectName("verticalLayoutWidget_5")
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.verticalLayoutWidget_5)
+        self.verticalLayout_3.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_3.setObjectName("verticalLayout_3")
+        self.btn_Test = QtWidgets.QPushButton(self.verticalLayoutWidget_5)
+        font = QtGui.QFont()
+        font.setPointSize(-1)
+        self.btn_Test.setFont(font)
+        self.btn_Test.setStyleSheet("QPushButton {\n"
+"    background-color: #4CAF50;  /* Màu nền xanh lá */\n"
+"    color: white;               /* Màu chữ trắng */\n"
+"    border-radius: 10px;        /* Bo góc */\n"
+"    font-size: 20px;\n"
+"    padding: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: white;    /* Khi hover, đổi nền thành trắng */\n"
+"    color: #4CAF50;            /* Chữ đổi thành màu xanh lá */\n"
+"    border: 2px solid #4CAF50; /* Viền xanh lá để nổi bật */\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #367c39; /* Màu nền khi nhấn */\n"
+"    color: white;\n"
+"}\n"
+"")
+        self.btn_Test.setObjectName("btn_Test")
+        self.verticalLayout_3.addWidget(self.btn_Test)
+        self.btn_Backtracking = QtWidgets.QPushButton(self.verticalLayoutWidget_5)
+        font = QtGui.QFont()
+        font.setPointSize(-1)
+        self.btn_Backtracking.setFont(font)
+        self.btn_Backtracking.setStyleSheet("QPushButton {\n"
+"    background-color: #4CAF50;  /* Màu nền xanh lá */\n"
+"    color: white;               /* Màu chữ trắng */\n"
+"    border-radius: 10px;        /* Bo góc */\n"
+"    font-size: 20px;\n"
+"    padding: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: white;    /* Khi hover, đổi nền thành trắng */\n"
+"    color: #4CAF50;            /* Chữ đổi thành màu xanh lá */\n"
+"    border: 2px solid #4CAF50; /* Viền xanh lá để nổi bật */\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #367c39; /* Màu nền khi nhấn */\n"
+"    color: white;\n"
+"}\n"
+"")
+        self.btn_Backtracking.setObjectName("btn_Backtracking")
+        self.verticalLayout_3.addWidget(self.btn_Backtracking)
+        self.btn_AC3 = QtWidgets.QPushButton(self.verticalLayoutWidget_5)
+        font = QtGui.QFont()
+        font.setPointSize(-1)
+        self.btn_AC3.setFont(font)
+        self.btn_AC3.setStyleSheet("QPushButton {\n"
+"    background-color: #4CAF50;  /* Màu nền xanh lá */\n"
+"    color: white;               /* Màu chữ trắng */\n"
+"    border-radius: 10px;        /* Bo góc */\n"
+"    font-size: 20px;\n"
+"    padding: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: white;    /* Khi hover, đổi nền thành trắng */\n"
+"    color: #4CAF50;            /* Chữ đổi thành màu xanh lá */\n"
+"    border: 2px solid #4CAF50; /* Viền xanh lá để nổi bật */\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #367c39; /* Màu nền khi nhấn */\n"
+"    color: white;\n"
+"}\n"
+"")
+        self.btn_AC3.setObjectName("btn_AC3")
+        self.verticalLayout_3.addWidget(self.btn_AC3)
+        self.groupBox_6 = QtWidgets.QGroupBox(Frame)
+        self.groupBox_6.setGeometry(QtCore.QRect(930, 690, 241, 231))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        font.setPointSize(9)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.groupBox_6.setFont(font)
+        self.groupBox_6.setStyleSheet("QGroupBox {\n"
+"    border: 2px solid #4CAF50;\n"
+"    border-radius: 10px;\n"
+"    margin-top: 20px;\n"
+"    background-color: #f9f9f9;\n"
+"    padding: 10px;\n"
+"    font: 9pt \"Segoe UI\";  /* Giữ font chữ cỡ 9 */\n"
+"    color: #333;\n"
+"}\n"
+"\n"
+"QGroupBox::title {\n"
+"    subcontrol-origin: margin;\n"
+"    subcontrol-position: top center;\n"
+"    background-color: #4CAF50;\n"
+"    color: white;\n"
+"    padding: 3px 10px;\n"
+"    border-radius: 5px;\n"
+"    font: bold 9pt \"Segoe UI\"; /* Tiêu đề cũng font 9 */\n"
+"}\n"
+"")
+        self.groupBox_6.setObjectName("groupBox_6")
+        self.verticalLayoutWidget_7 = QtWidgets.QWidget(self.groupBox_6)
+        self.verticalLayoutWidget_7.setGeometry(QtCore.QRect(0, 50, 241, 171))
+        self.verticalLayoutWidget_7.setObjectName("verticalLayoutWidget_7")
+        self.verticalLayout_7 = QtWidgets.QVBoxLayout(self.verticalLayoutWidget_7)
+        self.verticalLayout_7.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_7.setObjectName("verticalLayout_7")
+        self.btn_QLearning = QtWidgets.QPushButton(self.verticalLayoutWidget_7)
+        font = QtGui.QFont()
+        font.setPointSize(-1)
+        self.btn_QLearning.setFont(font)
+        self.btn_QLearning.setStyleSheet("QPushButton {\n"
+"    background-color: #4CAF50;  /* Màu nền xanh lá */\n"
+"    color: white;               /* Màu chữ trắng */\n"
+"    border-radius: 10px;        /* Bo góc */\n"
+"    font-size: 20px;\n"
+"    padding: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: white;    /* Khi hover, đổi nền thành trắng */\n"
+"    color: #4CAF50;            /* Chữ đổi thành màu xanh lá */\n"
+"    border: 2px solid #4CAF50; /* Viền xanh lá để nổi bật */\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #367c39; /* Màu nền khi nhấn */\n"
+"    color: white;\n"
+"}\n"
+"")
+        self.btn_QLearning.setObjectName("btn_QLearning")
+        self.verticalLayout_7.addWidget(self.btn_QLearning)
 
         self.retranslateUi(Frame)
         QtCore.QMetaObject.connectSlotsByName(Frame)
@@ -682,16 +990,17 @@ class Ui_Frame(object):
         self.groupBox_4.setTitle(_translate("Frame", "Local Search Algorithms"))
         self.btn_Shc.setText(_translate("Frame", "SHC"))
         self.btn_Sahc.setText(_translate("Frame", "SAHC"))
-        self.btn_StochchaticHC.setText(_translate("Frame", "StochasticHC"))
         self.btn_Sa.setText(_translate("Frame", "SA"))
+        self.btn_StochchaticHC.setText(_translate("Frame", "StochasticHC"))
         self.btn_Bs.setText(_translate("Frame", "BeamSearch"))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    Frame = QtWidgets.QFrame()
-    ui = Ui_Frame()
-    ui.setupUi(Frame)
-    Frame.show()
-    sys.exit(app.exec_())
+        self.btn_Ga.setText(_translate("Frame", "GA"))
+        self.groupBox_3.setTitle(_translate("Frame", "Searching with Nondeterministic "))
+        self.btn_AoStar.setText(_translate("Frame", "AO*"))
+        self.btn_Nos.setText(_translate("Frame", "NOS"))
+        self.btn_Pos.setText(_translate("Frame", "POS"))
+        self.groupBox_5.setTitle(_translate("Frame", ".........................................................."))
+        self.btn_Test.setText(_translate("Frame", "Test"))
+        self.btn_Backtracking.setText(_translate("Frame", "Backtracking"))
+        self.btn_AC3.setText(_translate("Frame", "AC3"))
+        self.groupBox_6.setTitle(_translate("Frame", "Reinforcement Learning"))
+        self.btn_QLearning.setText(_translate("Frame", "Q-Learning"))

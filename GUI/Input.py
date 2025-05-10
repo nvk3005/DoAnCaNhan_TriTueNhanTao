@@ -1,6 +1,6 @@
 import sys
 from PyQt5.QtWidgets import QApplication, QFrame
-from InputForm import Ui_Frame
+from GUI.InputForm import Ui_Frame
 
 class INPUT(QFrame, Ui_Frame):
     def __init__(self):

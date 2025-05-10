@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Frame</class>
+ <widget class="QFrame" name="Frame">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1174</width>
+    <height>691</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Frame</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">color: #FF8C00;
+</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>30</y>
+     <width>351</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>DETAILED STEPS</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_Complete">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>590</y>
+     <width>421</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#btn_Complete {
+    background-color: #E0E0E0;  /* Màu nền xám nhạt */
+    color: #FF9800;             /* Màu chữ cam */
+    font-size: 18px;            /* Cỡ chữ */
+    font-weight: bold;          /* In đậm */
+    padding: 12px 24px;         /* Lề trong */
+    border-radius: 8px;         /* Bo góc */
+    border: 2px solid #FF9800;  /* Viền màu cam */
+}
+
+QPushButton#btn_Complete:hover {
+    background-color: #FFCC80;  /* Khi hover thì nền cam nhạt */
+    color: white;               /* Chữ trắng */
+    border: 2px solid #FF9800;  /* Viền vẫn cam */
+}
+
+QPushButton#btn_Complete:pressed {
+    background-color: #F57C00;  /* Khi nhấn thì cam đậm hơn */
+    color: white;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Complete the review</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="txt_Steps">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>110</y>
+     <width>921</width>
+     <height>411</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

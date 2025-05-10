@@ -1,0 +1,3461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Frame</class>
+ <widget class="QFrame" name="Frame">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1313</width>
+    <height>809</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Frame</string>
+  </property>
+  <widget class="QWidget" name="gridLayoutWidget_5">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>1170</y>
+     <width>201</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_9">
+    <item row="1" column="1">
+     <widget class="QLabel" name="label_73">
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QLabel" name="label_74">
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_75">
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QLabel" name="label_76">
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLabel" name="label_77">
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_78">
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_79">
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLabel" name="label_80">
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="QLabel" name="label_81">
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="gridLayoutWidget_8">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>1000</y>
+     <width>201</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_12">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_100">
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QLabel" name="label_101">
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QLabel" name="label_102">
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLabel" name="label_103">
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_104">
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_105">
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="QLabel" name="label_106">
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLabel" name="label_107">
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLabel" name="label_108">
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>471</width>
+     <height>731</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QGroupBox {
+    border: 2px solid #0078D7;
+    border-radius: 8px;
+    margin-top: 20px;
+    background-color: #f2faff;
+    font: bold 12pt &quot;Segoe UI&quot;;
+    color: #003366;
+    padding: 10px; /* Thêm padding để nội dung không bị đè */
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 5px 15px;
+    background-color: #0078D7;
+    color: white;
+    border-radius: 5px;
+}
+</string>
+   </property>
+   <property name="title">
+    <string>Start State</string>
+   </property>
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>201</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="1" column="1">
+      <widget class="QLabel" name="s04">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLabel" name="s05">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="s00">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="s02">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="s01">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="s03">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="s06">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLabel" name="s07">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QLabel" name="s08">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>50</y>
+      <width>201</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="1" column="1">
+      <widget class="QLabel" name="s44">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLabel" name="s45">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="s40">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="s42">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="s41">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="s43">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="s46">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLabel" name="s47">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QLabel" name="s48">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>220</y>
+      <width>201</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_3">
+     <item row="1" column="0">
+      <widget class="QLabel" name="s13">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="s16">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLabel" name="s17">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QLabel" name="s18">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="s14">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLabel" name="s15">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="s12">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="s11">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="s10">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>390</y>
+      <width>201</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_4">
+     <item row="1" column="0">
+      <widget class="QLabel" name="s23">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="s26">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLabel" name="s27">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QLabel" name="s28">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="s24">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLabel" name="s25">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="s22">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="s21">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="s20">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_6">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>570</y>
+      <width>201</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_10">
+     <item row="1" column="0">
+      <widget class="QLabel" name="s33">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="s36">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLabel" name="s37">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QLabel" name="s38">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="s34">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLabel" name="s35">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="s32">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="s31">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="s30">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_7">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>220</y>
+      <width>201</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_11">
+     <item row="1" column="0">
+      <widget class="QLabel" name="s53">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="s56">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QLabel" name="s58">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLabel" name="s57">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="s52">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="s54">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLabel" name="s55">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="s50">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="s51">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_9">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>390</y>
+      <width>201</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_13">
+     <item row="1" column="0">
+      <widget class="QLabel" name="s63">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="s66">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLabel" name="s67">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QLabel" name="s68">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="s64">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLabel" name="s65">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="s62">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="s61">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="s60">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_10">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>570</y>
+      <width>201</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_14">
+     <item row="1" column="0">
+      <widget class="QLabel" name="s73">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="s76">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLabel" name="s77">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QLabel" name="s78">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="s74">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLabel" name="s75">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="s72">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="s71">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="s70">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_3">
+   <property name="geometry">
+    <rect>
+     <x>830</x>
+     <y>10</y>
+     <width>471</width>
+     <height>731</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QGroupBox {
+    border: 2px solid #0078D7;
+    border-radius: 8px;
+    margin-top: 20px;
+    background-color: #f2faff;
+    font: bold 12pt &quot;Segoe UI&quot;;
+    color: #003366;
+    padding: 10px; /* Thêm padding để nội dung không bị đè */
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 5px 15px;
+    background-color: #0078D7;
+    color: white;
+    border-radius: 5px;
+}
+</string>
+   </property>
+   <property name="title">
+    <string>Destination State</string>
+   </property>
+   <widget class="QWidget" name="gridLayoutWidget_19">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>201</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_23">
+     <item row="1" column="1">
+      <widget class="QLabel" name="d04">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLabel" name="d05">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="d00">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="d02">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="d01">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="d03">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="d06">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLabel" name="d07">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QLabel" name="d08">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_20">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>50</y>
+      <width>201</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_24">
+     <item row="1" column="1">
+      <widget class="QLabel" name="d44">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLabel" name="d45">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="d40">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="d42">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="d41">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="d43">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="d46">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLabel" name="d47">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QLabel" name="d48">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_22">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>390</y>
+      <width>201</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_26">
+     <item row="1" column="0">
+      <widget class="QLabel" name="d23">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="d26">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLabel" name="d27">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QLabel" name="d28">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="d24">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLabel" name="d25">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="d22">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="d21">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="d20">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_23">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>570</y>
+      <width>201</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_27">
+     <item row="1" column="0">
+      <widget class="QLabel" name="d33">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="d36">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLabel" name="d37">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QLabel" name="d38">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="d34">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLabel" name="d35">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="d32">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="d31">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="d30">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_24">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>220</y>
+      <width>201</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_28">
+     <item row="1" column="0">
+      <widget class="QLabel" name="d53">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="d56">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QLabel" name="d58">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLabel" name="d57">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="d52">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="d54">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLabel" name="d55">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="d50">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="d51">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_25">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>390</y>
+      <width>201</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_29">
+     <item row="1" column="0">
+      <widget class="QLabel" name="d63">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="d66">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLabel" name="d67">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QLabel" name="d68">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="d64">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLabel" name="d65">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="d62">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="d61">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="d60">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 3px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_26">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>570</y>
+      <width>201</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_30">
+     <item row="1" column="0">
+      <widget class="QLabel" name="d73">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="d76">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLabel" name="d77">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QLabel" name="d78">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="d74">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLabel" name="d75">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="d72">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="d71">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="d70">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_21">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>220</y>
+      <width>201</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_25">
+     <item row="1" column="1">
+      <widget class="QLabel" name="d14">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLabel" name="d15">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="d10">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="d12">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="d11">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="d13">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="d16">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLabel" name="d17">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QLabel" name="d18">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    background-color: #eaf6ff;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    color: #003366;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="gridLayoutWidget_11">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>140</y>
+     <width>291</width>
+     <height>291</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_5">
+    <item row="0" column="2">
+     <widget class="QLabel" name="r03">
+      <property name="font">
+       <font>
+        <family>Segoe UI</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    background-color: #f0f8ff;       /* Màu nền xanh nhạt */
+    border: 2px solid #4682b4;       /* Viền xanh đậm */
+    border-radius: 8px;              /* Bo góc */
+    color: #000080;                  /* Màu chữ xanh đậm */
+    qproperty-alignment: AlignCenter; /* Căn giữa nội dung */
+    padding: 5px;
+}
+
+QLabel:hover {
+    background-color: #dbeeff;       /* Hiệu ứng khi hover */
+    border: 2px solid #1e90ff;
+}
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLabel" name="r02">
+      <property name="font">
+       <font>
+        <family>Segoe UI</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    background-color: #f0f8ff;       /* Màu nền xanh nhạt */
+    border: 2px solid #4682b4;       /* Viền xanh đậm */
+    border-radius: 8px;              /* Bo góc */
+    color: #000080;                  /* Màu chữ xanh đậm */
+    qproperty-alignment: AlignCenter; /* Căn giữa nội dung */
+    padding: 5px;
+}
+
+QLabel:hover {
+    background-color: #dbeeff;       /* Hiệu ứng khi hover */
+    border: 2px solid #1e90ff;
+}
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="r01">
+      <property name="font">
+       <font>
+        <family>Segoe UI</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    background-color: #f0f8ff;       /* Màu nền xanh nhạt */
+    border: 2px solid #4682b4;       /* Viền xanh đậm */
+    border-radius: 8px;              /* Bo góc */
+    color: #000080;                  /* Màu chữ xanh đậm */
+    qproperty-alignment: AlignCenter; /* Căn giữa nội dung */
+    padding: 5px;
+}
+
+QLabel:hover {
+    background-color: #dbeeff;       /* Hiệu ứng khi hover */
+    border: 2px solid #1e90ff;
+}
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLabel" name="r05">
+      <property name="font">
+       <font>
+        <family>Segoe UI</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    background-color: #f0f8ff;       /* Màu nền xanh nhạt */
+    border: 2px solid #4682b4;       /* Viền xanh đậm */
+    border-radius: 8px;              /* Bo góc */
+    color: #000080;                  /* Màu chữ xanh đậm */
+    qproperty-alignment: AlignCenter; /* Căn giữa nội dung */
+    padding: 5px;
+}
+
+QLabel:hover {
+    background-color: #dbeeff;       /* Hiệu ứng khi hover */
+    border: 2px solid #1e90ff;
+}
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QLabel" name="r06">
+      <property name="font">
+       <font>
+        <family>Segoe UI</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    background-color: #f0f8ff;       /* Màu nền xanh nhạt */
+    border: 2px solid #4682b4;       /* Viền xanh đậm */
+    border-radius: 8px;              /* Bo góc */
+    color: #000080;                  /* Màu chữ xanh đậm */
+    qproperty-alignment: AlignCenter; /* Căn giữa nội dung */
+    padding: 5px;
+}
+
+QLabel:hover {
+    background-color: #dbeeff;       /* Hiệu ứng khi hover */
+    border: 2px solid #1e90ff;
+}
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="r04">
+      <property name="font">
+       <font>
+        <family>Segoe UI</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    background-color: #f0f8ff;       /* Màu nền xanh nhạt */
+    border: 2px solid #4682b4;       /* Viền xanh đậm */
+    border-radius: 8px;              /* Bo góc */
+    color: #000080;                  /* Màu chữ xanh đậm */
+    qproperty-alignment: AlignCenter; /* Căn giữa nội dung */
+    padding: 5px;
+}
+
+QLabel:hover {
+    background-color: #dbeeff;       /* Hiệu ứng khi hover */
+    border: 2px solid #1e90ff;
+}
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="r07">
+      <property name="font">
+       <font>
+        <family>Segoe UI</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    background-color: #f0f8ff;       /* Màu nền xanh nhạt */
+    border: 2px solid #4682b4;       /* Viền xanh đậm */
+    border-radius: 8px;              /* Bo góc */
+    color: #000080;                  /* Màu chữ xanh đậm */
+    qproperty-alignment: AlignCenter; /* Căn giữa nội dung */
+    padding: 5px;
+}
+
+QLabel:hover {
+    background-color: #dbeeff;       /* Hiệu ứng khi hover */
+    border: 2px solid #1e90ff;
+}
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLabel" name="r08">
+      <property name="font">
+       <font>
+        <family>Segoe UI</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    background-color: #f0f8ff;       /* Màu nền xanh nhạt */
+    border: 2px solid #4682b4;       /* Viền xanh đậm */
+    border-radius: 8px;              /* Bo góc */
+    color: #000080;                  /* Màu chữ xanh đậm */
+    qproperty-alignment: AlignCenter; /* Căn giữa nội dung */
+    padding: 5px;
+}
+
+QLabel:hover {
+    background-color: #dbeeff;       /* Hiệu ứng khi hover */
+    border: 2px solid #1e90ff;
+}
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="QLabel" name="r09">
+      <property name="font">
+       <font>
+        <family>Segoe UI</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    background-color: #f0f8ff;       /* Màu nền xanh nhạt */
+    border: 2px solid #4682b4;       /* Viền xanh đậm */
+    border-radius: 8px;              /* Bo góc */
+    color: #000080;                  /* Màu chữ xanh đậm */
+    qproperty-alignment: AlignCenter; /* Căn giữa nội dung */
+    padding: 5px;
+}
+
+QLabel:hover {
+    background-color: #dbeeff;       /* Hiệu ứng khi hover */
+    border: 2px solid #1e90ff;
+}
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="btnStart">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>540</y>
+     <width>201</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #00A8A8;         /* Xanh ngọc lam dịu */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font: bold 14px &quot;Segoe UI&quot;;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+QPushButton:hover {
+    background-color: #008C8C;         /* Đậm hơn khi hover */
+}
+
+QPushButton:pressed {
+    background-color: #006F6F;         /* Đậm hơn nữa khi nhấn giữ */
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Start</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnComplete">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>700</y>
+     <width>201</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #00A8A8;         /* Xanh ngọc lam dịu */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font: bold 14px &quot;Segoe UI&quot;;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+QPushButton:hover {
+    background-color: #008C8C;         /* Đậm hơn khi hover */
+}
+
+QPushButton:pressed {
+    background-color: #006F6F;         /* Đậm hơn nữa khi nhấn giữ */
+}
+
+</string>
+   </property>
+   <property name="text">
+    <string>Complete</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>460</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>STEP:</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnReset">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>620</y>
+     <width>201</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #00A8A8;         /* Xanh ngọc lam dịu */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font: bold 14px &quot;Segoe UI&quot;;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+QPushButton:hover {
+    background-color: #008C8C;         /* Đậm hơn khi hover */
+}
+
+QPushButton:pressed {
+    background-color: #006F6F;         /* Đậm hơn nữa khi nhấn giữ */
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Reset</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblStep">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>460</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

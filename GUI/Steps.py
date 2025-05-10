@@ -1,5 +1,5 @@
 from PyQt5.QtWidgets import QApplication, QFrame, QTableWidgetItem
-from StepsForm import Ui_Frame
+from GUI.StepsForm import Ui_Frame
 
 class STEPS(QFrame, Ui_Frame):
     result = []
