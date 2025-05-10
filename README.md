@@ -45,7 +45,7 @@ Giao diện GUI của dự án được chia làm 3 trang chính:
 
 ### 1. Breadth-First Search
 |Trạng thái bắt đầu và Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
-| :--- | :--- | :---| :---|
+| :--- | :---| :---|
 |![Image](https://github.com/user-attachments/assets/5bfa0d34-62fb-4861-8904-b045dc3567dc)|![Image](https://github.com/user-attachments/assets/0183fb1d-71cc-4646-b4dc-06685e9a9a62)|<p>Steps: 23</p>|
 ### 2. Depth-First Search
 |Trạng thái bắt đầu|Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
