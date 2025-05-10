@@ -48,51 +48,41 @@ Giao diện GUI của dự án được chia làm 3 trang chính:
 | :--- | :---| :---|
 |![Image](https://github.com/user-attachments/assets/5bfa0d34-62fb-4861-8904-b045dc3567dc)|![Image](https://github.com/user-attachments/assets/151c2746-571b-43fc-b87a-895e15e91b62)|<p>Steps: 23</p>|
 ### 2. Depth-First Search
-|Trạng thái bắt đầu|Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
-| :--- | :--- | :---| :---|
-|![](https://github.com/user-attachments/assets/0b25e011-e762-43a8-bedf-9fbecfc7cd7d)|![](https://github.com/user-attachments/assets/05d09562-c4e5-4335-82db-cc6a50bf9c7e)||<p>Steps: 66041</p>|
+|Trạng thái bắt đầu và Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
+| :--- | :---| :---|
+|![Image](https://github.com/user-attachments/assets/5bfa0d34-62fb-4861-8904-b045dc3567dc)|None|<p>Steps: 7113</p>|
 ### 3. Uniform Cost Search
-|Trạng thái bắt đầu|Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
-| :--- | :--- | :---| :---|
-|![](https://github.com/user-attachments/assets/0b25e011-e762-43a8-bedf-9fbecfc7cd7d)|![](https://github.com/user-attachments/assets/05d09562-c4e5-4335-82db-cc6a50bf9c7e)| ![Image](https://github.com/user-attachments/assets/d12d7a32-6188-437f-98a7-a17ce4d53a18)|<p>Steps: 23</p>|
+|Trạng thái bắt đầu và Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
+| :--- | :---| :---|
+|![Image](https://github.com/user-attachments/assets/5bfa0d34-62fb-4861-8904-b045dc3567dc)|![Image](https://github.com/user-attachments/assets/ee764cb5-a633-43e0-bfce-7eff3805b0fe)|<p>Steps: 23</p>|
 ### 4. Iterative Deepening Search
-|Trạng thái bắt đầu|Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
-| :--- | :--- | :---| :---|
-|![](https://github.com/user-attachments/assets/0b25e011-e762-43a8-bedf-9fbecfc7cd7d)|![](https://github.com/user-attachments/assets/05d09562-c4e5-4335-82db-cc6a50bf9c7e)| ![Image](https://github.com/user-attachments/assets/6ca85878-596b-4800-85c1-4cdbd5f15ea3)|<p>Steps: 27</p>|
+|Trạng thái bắt đầu và Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
+| :--- | :---| :---|
+|![Image](https://github.com/user-attachments/assets/5bfa0d34-62fb-4861-8904-b045dc3567dc)|![Image](https://github.com/user-attachments/assets/6809a94f-4b8b-46b9-8c24-b6c6a7f155d6)|<p>Steps: 27</p>|
 ### 5. Algorithm Performance Comparison
 
 
 ## II. Informed Search Algorithms
 ### 1. A* Search
-|Trạng thái bắt đầu|Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
-| :--- | :--- | :---| :---|
-|![](https://github.com/user-attachments/assets/0b25e011-e762-43a8-bedf-9fbecfc7cd7d)|![](https://github.com/user-attachments/assets/05d09562-c4e5-4335-82db-cc6a50bf9c7e)| ![Image](https://github.com/user-attachments/assets/dea3f349-9bca-45a0-8c83-381b536dc882)|<p>Steps: 23</p>|
+|Trạng thái bắt đầu và Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
+| :--- | :---| :---|
+|![Image](https://github.com/user-attachments/assets/5bfa0d34-62fb-4861-8904-b045dc3567dc)|![Image](https://github.com/user-attachments/assets/52df5071-a7da-4f82-a511-41ac1315c885)|<p>Steps: 23</p>|
 ### 2. Greedy Best-First Search
-|Trạng thái bắt đầu|Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
-| :--- | :--- | :---| :---|
-|![](https://github.com/user-attachments/assets/0b25e011-e762-43a8-bedf-9fbecfc7cd7d)|![](https://github.com/user-attachments/assets/05d09562-c4e5-4335-82db-cc6a50bf9c7e)|  ![Image](https://github.com/user-attachments/assets/784de3a7-df51-49c5-8bb9-bdc00887e268)|<p>Steps: 53</p>|
+|Trạng thái bắt đầu và Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
+| :--- | :---| :---|
+|![Image](https://github.com/user-attachments/assets/5bfa0d34-62fb-4861-8904-b045dc3567dc)|![Image](https://github.com/user-attachments/assets/6da5f398-03d1-41cf-a93b-33e851de5032)|<p>Steps: 47</p>|
 ### 3. Iterative Deepening A*
-|Trạng thái bắt đầu|Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
-| :--- | :--- | :---| :---|
-|![](https://github.com/user-attachments/assets/0b25e011-e762-43a8-bedf-9fbecfc7cd7d)|![](https://github.com/user-attachments/assets/05d09562-c4e5-4335-82db-cc6a50bf9c7e)|  ![Image](https://github.com/user-attachments/assets/5179e356-fbc4-4e0b-9101-79f52306a621)|<p>Steps: 23</p>|
+|Trạng thái bắt đầu và Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
+| :--- | :---| :---|
+|![Image](https://github.com/user-attachments/assets/5bfa0d34-62fb-4861-8904-b045dc3567dc)|![Image](https://github.com/user-attachments/assets/1c6a6b4e-a560-46e6-9a5d-f7e39f9a2e73)|<p>Steps: 23</p>|
 ## III. Local Search Algorithms
 ### 1. Simple Hill Climbing
-|Trạng thái bắt đầu|Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
-| :--- | :--- | :---| :---|
-|![](https://github.com/user-attachments/assets/0b25e011-e762-43a8-bedf-9fbecfc7cd7d)|![](https://github.com/user-attachments/assets/05d09562-c4e5-4335-82db-cc6a50bf9c7e)|  Không tìm thấy lời giải|<p>Steps: 0</p>|
+
 ### 2. Steepest Ascent Hill Climbing
-|Trạng thái bắt đầu|Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
-| :--- | :--- | :---| :---|
-|![](https://github.com/user-attachments/assets/0b25e011-e762-43a8-bedf-9fbecfc7cd7d)|![](https://github.com/user-attachments/assets/05d09562-c4e5-4335-82db-cc6a50bf9c7e)|  Không tìm thấy lời giải|<p>Steps: 0</p>
+
 ### 3. Stochastic Hill Climbing
-|Trạng thái bắt đầu|Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
-| :--- | :--- | :---| :---|
-|![](https://github.com/user-attachments/assets/0b25e011-e762-43a8-bedf-9fbecfc7cd7d)|![](https://github.com/user-attachments/assets/05d09562-c4e5-4335-82db-cc6a50bf9c7e)|  Không tìm thấy lời giải|<p>Steps: 0</p>
+
 ### 4. SimulatedAnnealing
-|Trạng thái bắt đầu|Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
-| :--- | :--- | :---| :---|
-|![](https://github.com/user-attachments/assets/0b25e011-e762-43a8-bedf-9fbecfc7cd7d)|![](https://github.com/user-attachments/assets/05d09562-c4e5-4335-82db-cc6a50bf9c7e)|  Không tìm thấy lời giải|<p>Steps: 0</p>
+
 ### 5. Beam Search
-|Trạng thái bắt đầu|Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
-| :--- | :--- | :---| :---|
-|![](https://github.com/user-attachments/assets/0b25e011-e762-43a8-bedf-9fbecfc7cd7d)|![](https://github.com/user-attachments/assets/05d09562-c4e5-4335-82db-cc6a50bf9c7e)|  ![Image](https://github.com/user-attachments/assets/77a29fc2-1ae0-4886-9782-e9295ca6cac3)|<p>Steps: 43</p>
+
