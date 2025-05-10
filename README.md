@@ -41,6 +41,7 @@ Giao diện GUI của dự án được chia làm 3 trang chính:
 
 ## I. Uninformed Search Algorithms
 ### Các thành phần chính của bài toán tìm kiếm
+## I. Uninformed Search Algorithms
 
 ### 1. Breadth-First Search
 |Trạng thái bắt đầu|Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
@@ -58,6 +59,8 @@ Giao diện GUI của dự án được chia làm 3 trang chính:
 |Trạng thái bắt đầu|Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
 | :--- | :--- | :---| :---|
 |![](https://github.com/user-attachments/assets/0b25e011-e762-43a8-bedf-9fbecfc7cd7d)|![](https://github.com/user-attachments/assets/05d09562-c4e5-4335-82db-cc6a50bf9c7e)| ![Image](https://github.com/user-attachments/assets/6ca85878-596b-4800-85c1-4cdbd5f15ea3)|<p>Steps: 27</p>|
+### 5. Algorithm Performance Comparison
+
 
 ## II. Informed Search Algorithms
 ### 1. A* Search
