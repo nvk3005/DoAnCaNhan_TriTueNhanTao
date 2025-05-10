@@ -14,6 +14,7 @@ dựa trên việc áp dụng để giải quyết một vấn đề cụ thể 
 Giao diện GUI của dự án được chia làm 3 trang chính:
 - Trang Input: Cho phép người dùng nhập trạng thái bắt đầu và trạng thái đích
 - Trang Result: Cho phép người dùng chọn thuật toán muốn áp dụng để tìm ra lời giải cho bài toán
+- Trang Search: Áp dụng cho 2 thuật toán Searching with No Observation và Searching with Partially Observation
 - Trang Steps: Hiển thị chi tiết từng bước tìm ra lời giải của thuật toán
 
 ## Cách để chạy dự án.
@@ -26,6 +27,7 @@ Giao diện GUI của dự án được chia làm 3 trang chính:
   - [2. Depth-First Search](#2-depth-first-search)
   - [3. Uniform Cost Search](#3-uniform-cost-search)
   - [4. Iterative Deepening Search](#4-iterative-deepening-search)
+  - [5. Algorithm Performance Comparison](#5-algorithm-performance-comparison)
 - [II. Informed Search Algorithms](#ii-informed-search-algorithms)
   - [1. A* Search](#1-a-search)
   - [2. Greedy Best-First Search](#2-greedy-best-first-search)
