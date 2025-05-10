@@ -93,4 +93,6 @@ Giao diện GUI của dự án được chia làm 3 trang chính:
 | :--- | :---| :---|
 |![Image](https://github.com/user-attachments/assets/5bfa0d34-62fb-4861-8904-b045dc3567dc)|![Image](https://github.com/user-attachments/assets/505f250c-5249-47aa-af78-072def09f637)|<p>Steps: 0</p>|
 ### 5. Beam Search
-
+|Trạng thái bắt đầu và Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
+| :--- | :---| :---|
+|![Image](https://github.com/user-attachments/assets/5bfa0d34-62fb-4861-8904-b045dc3567dc)|![Image](https://github.com/user-attachments/assets/f629404c-51cf-4575-8a29-900e57af9f50)|<p>Steps: 133</p>|
