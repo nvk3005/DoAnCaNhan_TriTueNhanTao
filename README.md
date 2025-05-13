@@ -3,11 +3,11 @@
 
 ## 📑 Bảng nội dung
 
-1. [Giới thiệu tổng quan về dự án](#giới-thiệu-tổng-quan-về-dự-án)
-2. [Các công nghệ dùng trong dự án](#các-công-nghệ-dùng-trong-dự-án)
-3. [Cách thức hoạt động của dự án](#cách-thức-hoạt-động-của-dự-án)
-4. [Cách chạy dự án](#cách-để-chạy-dự-án)
-5. [Các thuật toán được sử dụng trong dự án](#các-thuật-toán-được-sử-dụng-trong-dự-án)
+1. [Giới thiệu tổng quan về dự án](#-giới-thiệu-tổng-quan-về-dự-án)
+2. [Các công nghệ dùng trong dự án](#%EF%B8%8F-các-công-nghệ-dùng-trong-dự-án)
+3. [Cách thức hoạt động của dự án](#%EF%B8%8F-cách-thức-hoạt-động-của-dự-án)
+4. [Cách chạy dự án](#%EF%B8%8F-cách-để-chạy-dự-án)
+5. [Các thuật toán được sử dụng trong dự án](#-các-thuật-toán-được-sử-dụng-trong-dự-án)
 
 ## 🧠 Giới thiệu tổng quan về dự án
 Dự án được xây dựng nhằm mục đích nghiên cứu, đánh giá hiệu suất của các thuật toán thuộc các nhóm thuật toán khác nhau như Uninformed Search Algorithms, Informed Search Algorithms, Local Search Algorithms, Searching with Nondeterministic, Constraint Satisfaction Problem, Reinforcement Learning.
@@ -64,13 +64,12 @@ Giao diện GUI của dự án được chia làm 4 trang chính:
   - [1. Test](#1-test)
   - [2. Backtracking](#2-backtracking)
   - [3. AC-3](#3-ac-3)
+  - [4. Algorithm Performance Comparison](#4-algorithm-performance-comparison)
 - [VI. Reinforcement Learning](vi-reinforcement-learning)
   - [1. Q-Learning](#1-q-learning)
+  - [2. Algorithm Performance Comparison](#2-algorithm-performance-comparison)
 
 ## I. Uninformed Search Algorithms
-### Các thành phần chính của bài toán tìm kiếm
-## I. Uninformed Search Algorithms
-
 ### 1. Breadth-First Search
 |Trạng thái bắt đầu và Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
 | :--- | :---| :---|
@@ -167,12 +166,29 @@ Giao diện GUI của dự án được chia làm 4 trang chính:
 |![Image](https://github.com/user-attachments/assets/3c4e28f4-10e0-48e8-bd2d-b01870909915)|![Image](https://github.com/user-attachments/assets/e88b0db4-1ebc-45fe-a3d8-70c1d58487ad)|<p>Không tìm ra lời giải đến trạng thái đích</p>|
 ### 4. Algorithm Performance Comparison
 #### AND OR Search
-
+- **AO\*** đã tìm ra lời giải sau 31 bước cho thấy thuật toán đã hoạt động hiệu quả bằng cách sử dụng kết hợp AND và OR trong tìm kiếm, phù hợp với bài toán có cấu trúc rẽ nhánh và cần đánh giá nhiều khả năng kế tiếp. Bên cạnh đó nhờ việc sử dụng visited giúp tránh trạng thái đã thăm, giảm thiểu lặp vô hạn và tăng hiệu quả tìm kiếm. Đồng thời giới hạn độ sâu để tránh lan rộng không kiểm soát
 #### Searching with No Observation
-- Trong bài toán này, cả trạng thái đầu và trạng thái đích đều được khởi tạo ngẫu nhiên, và thuật toán không được cung cấp bất kỳ thông tin nào về trạng thái mục tiêu trong quá trình tìm kiếm. Do không loại bỏ bất kỳ trạng thái nào trong không gian tìm kiếm, thuật toán có thể duyệt qua toàn bộ không gian trạng thái khả dĩ. Điều này góp phần làm tăng xác suất tìm ra lời giải, mặc dù chi phí tính toán có thể lớn.
+- Trong bài toán này, cả trạng thái đầu và trạng thái đích đều được khởi tạo ngẫu nhiên, và thuật toán không được cung cấp bất kỳ thông tin nào về trạng thái mục tiêu trong quá trình tìm kiếm. Do không loại bỏ bất kỳ trạng thái nào trong không gian tìm kiếm, thuật toán có thể duyệt qua toàn bộ không gian trạng thái. Điều này góp phần làm tăng xác suất tìm ra lời giải, mặc dù chi phí tính toán có thể lớn.
 #### Searching with Partially Observation
 - Thuật toán này cũng random ra 8 trạng thái đầu nhưng khác biệt so với **Searching with No Observation** là có nhìn thấy 1 phần của trạng thái đích nên sau mỗi bước chạy các trạng thái không thỏa mãn phần thông tin nhìn thấy được sẽ bị loại bỏ dẫn đến khả năng tìm ra lời giải tương đối thấp
 
+## V. Constraint Satisfaction Problem
+### 1. Test
+### 2. Backtracking
+|Trạng thái bắt đầu và Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
+| :--- | :---| :---|
+|![Image](https://github.com/user-attachments/assets/5bfa0d34-62fb-4861-8904-b045dc3567dc)|![Image](https://github.com/user-attachments/assets/a02cf679-d815-4b9f-85f5-f40afd25fef0)|<p>Steps: 31</p>|
+### 3. AC-3
 
+## VI. Reinforcement Learning
+### 1. Q-Learning
+|Trạng thái bắt đầu và Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
+| :--- | :---| :---|
+|![Image](https://github.com/user-attachments/assets/5bfa0d34-62fb-4861-8904-b045dc3567dc)|![alt text](image.png)|
+<p> Không tìm ra lời giải đến trạng thái đích</p>|
+
+### 2. Algorithm Performance Comparison
+#### Q-Learning
+- Thuật toán Q-Learning không thể tìm ra lời giải cho game 8 Puzzle với trạng thái đã khởi tạo điều này có thể do 1 số lý do như chưa đủ số vòng lặp học (episodes). Số lượng trạng thái của game lớn nên có thể agent chưa từng đi con đường đó trong quá trình training → Q-table có thể không đủ thông tin để tìm được đường đi.
 
 
