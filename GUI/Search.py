@@ -66,6 +66,7 @@ class SEARCH(QFrame, Ui_Frame):
         if self.connection:
             self.btnStart.clicked.disconnect()
             self.btnReset.clicked.disconnect()
+        self.lbl_title.setText("Searching with NoObservation")
         self.list_start_state = self.randomize_state()
         self.list_destination_state = self.randomize_state()
         self.btnStart.clicked.connect(self.NoObservation)
@@ -74,7 +75,6 @@ class SEARCH(QFrame, Ui_Frame):
         self.display_random_state()
 
     def NoObservation(self):
-        print("NoObservation")
         # Khởi tạo hàng đợi với các trạng thái bắt đầu
         queue = [Node(state) for state in self.list_start_state]
         # Tập hợp các trạng thái đã thăm
@@ -108,6 +108,7 @@ class SEARCH(QFrame, Ui_Frame):
         if self.connection:
             self.btnStart.clicked.disconnect()
             self.btnReset.clicked.disconnect()
+        self.lbl_title.setText("PartiallyObservation")
         self.list_start_state = self.randomize_state()
         self.list_destination_state = self.randomize_state(True)
         self.btnStart.clicked.connect(self.PartiallyObservation)
@@ -151,7 +152,6 @@ class SEARCH(QFrame, Ui_Frame):
         return True
 
     def PartiallyObservation(self):
-        print("PartiallyObservation")
         list_valid_state = []
         list_valid_state = [Node(state) for state in self.list_start_state]
         moves = ["Up", "Down", "Left", "Right"]

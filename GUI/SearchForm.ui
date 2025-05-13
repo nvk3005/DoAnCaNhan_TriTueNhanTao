@@ -3318,8 +3318,8 @@ QLabel:hover {
   <widget class="QPushButton" name="btnStart">
    <property name="geometry">
     <rect>
-     <x>580</x>
-     <y>540</y>
+     <x>550</x>
+     <y>520</y>
      <width>201</width>
      <height>51</height>
     </rect>
@@ -3351,8 +3351,8 @@ QPushButton:pressed {
   <widget class="QPushButton" name="btnComplete">
    <property name="geometry">
     <rect>
-     <x>580</x>
-     <y>700</y>
+     <x>550</x>
+     <y>690</y>
      <width>201</width>
      <height>51</height>
     </rect>
@@ -3405,8 +3405,8 @@ QPushButton:pressed {
   <widget class="QPushButton" name="btnReset">
    <property name="geometry">
     <rect>
-     <x>580</x>
-     <y>620</y>
+     <x>550</x>
+     <y>600</y>
      <width>201</width>
      <height>51</height>
     </rect>
@@ -3453,6 +3453,35 @@ QPushButton:pressed {
    </property>
    <property name="text">
     <string>0</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_title">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>40</y>
+     <width>331</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: white;
+    background-color: qlineargradient(
+        x1:0, y1:0, x2:1, y2:1,
+        stop:0 #00bcd4,
+        stop:1 #0097a7
+    );
+    font: bold 20px &quot;Segoe UI&quot;;
+    border: 2px solid #00838f;
+    border-radius: 10px;
+    padding: 10px;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+   </property>
+   <property name="text">
+    <string/>
    </property>
   </widget>
  </widget>

@@ -23,6 +23,7 @@ class UI():
         self.search = SEARCH()
         self.search.btnComplete.clicked.connect(self.Result_Page)
 
+
     def Load_Data(self):
         self.result.start_state = [
             [self.input.start_00.text(), self.input.start_01.text(), self.input.start_02.text()],

@@ -966,6 +966,20 @@ class Ui_Frame(object):
 "")
         self.btn_QLearning.setObjectName("btn_QLearning")
         self.verticalLayout_7.addWidget(self.btn_QLearning)
+        self.lbl_title = QtWidgets.QLabel(Frame)
+        self.lbl_title.setGeometry(QtCore.QRect(380, 10, 421, 61))
+        self.lbl_title.setStyleSheet("QLabel {\n"
+"    background-color: #f0f4f7;\n"
+"    color: #2c3e50;\n"
+"    font: bold 25px \"Segoe UI\";\n"
+"    border: 2px solid #3498db;\n"
+"    border-radius: 10px;\n"
+"    padding: 8px;\n"
+"    qproperty-alignment: AlignCenter;\n"
+"}\n"
+"")
+        self.lbl_title.setText("")
+        self.lbl_title.setObjectName("lbl_title")
 
         self.retranslateUi(Frame)
         QtCore.QMetaObject.connectSlotsByName(Frame)
@@ -998,7 +1012,7 @@ class Ui_Frame(object):
         self.btn_AoStar.setText(_translate("Frame", "AO*"))
         self.btn_Nos.setText(_translate("Frame", "NOS"))
         self.btn_Pos.setText(_translate("Frame", "POS"))
-        self.groupBox_5.setTitle(_translate("Frame", ".........................................................."))
+        self.groupBox_5.setTitle(_translate("Frame", " Constraint Satisfaction Problem"))
         self.btn_Test.setText(_translate("Frame", "Test"))
         self.btn_Backtracking.setText(_translate("Frame", "Backtracking"))
         self.btn_AC3.setText(_translate("Frame", "AC3"))

@@ -1210,7 +1210,7 @@ QGroupBox::title {
 </string>
    </property>
    <property name="title">
-    <string>..........................................................</string>
+    <string> Constraint Satisfaction Problem</string>
    </property>
    <widget class="QWidget" name="verticalLayoutWidget_5">
     <property name="geometry">
@@ -1412,6 +1412,31 @@ QPushButton:pressed {
      </item>
     </layout>
    </widget>
+  </widget>
+  <widget class="QLabel" name="lbl_title">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>10</y>
+     <width>421</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    background-color: #f0f4f7;
+    color: #2c3e50;
+    font: bold 25px &quot;Segoe UI&quot;;
+    border: 2px solid #3498db;
+    border-radius: 10px;
+    padding: 8px;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
   </widget>
  </widget>
  <resources/>

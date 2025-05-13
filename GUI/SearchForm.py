@@ -2325,7 +2325,7 @@ class Ui_Frame(object):
         self.r09.setObjectName("r09")
         self.gridLayout_5.addWidget(self.r09, 2, 2, 1, 1)
         self.btnStart = QtWidgets.QPushButton(Frame)
-        self.btnStart.setGeometry(QtCore.QRect(580, 540, 201, 51))
+        self.btnStart.setGeometry(QtCore.QRect(550, 520, 201, 51))
         self.btnStart.setStyleSheet("QPushButton {\n"
 "    background-color: #00A8A8;         /* Xanh ngọc lam dịu */\n"
 "    border: none;\n"
@@ -2346,7 +2346,7 @@ class Ui_Frame(object):
 "")
         self.btnStart.setObjectName("btnStart")
         self.btnComplete = QtWidgets.QPushButton(Frame)
-        self.btnComplete.setGeometry(QtCore.QRect(580, 700, 201, 51))
+        self.btnComplete.setGeometry(QtCore.QRect(550, 690, 201, 51))
         self.btnComplete.setStyleSheet("QPushButton {\n"
 "    background-color: #00A8A8;         /* Xanh ngọc lam dịu */\n"
 "    border: none;\n"
@@ -2376,7 +2376,7 @@ class Ui_Frame(object):
         self.label.setFont(font)
         self.label.setObjectName("label")
         self.btnReset = QtWidgets.QPushButton(Frame)
-        self.btnReset.setGeometry(QtCore.QRect(580, 620, 201, 51))
+        self.btnReset.setGeometry(QtCore.QRect(550, 600, 201, 51))
         self.btnReset.setStyleSheet("QPushButton {\n"
 "    background-color: #00A8A8;         /* Xanh ngọc lam dịu */\n"
 "    border: none;\n"
@@ -2404,6 +2404,24 @@ class Ui_Frame(object):
         font.setWeight(75)
         self.lblStep.setFont(font)
         self.lblStep.setObjectName("lblStep")
+        self.lbl_title = QtWidgets.QLabel(Frame)
+        self.lbl_title.setGeometry(QtCore.QRect(490, 40, 331, 61))
+        self.lbl_title.setStyleSheet("QLabel {\n"
+"    color: white;\n"
+"    background-color: qlineargradient(\n"
+"        x1:0, y1:0, x2:1, y2:1,\n"
+"        stop:0 #00bcd4,\n"
+"        stop:1 #0097a7\n"
+"    );\n"
+"    font: bold 20px \"Segoe UI\";\n"
+"    border: 2px solid #00838f;\n"
+"    border-radius: 10px;\n"
+"    padding: 10px;\n"
+"    qproperty-alignment: AlignCenter;\n"
+"}\n"
+"")
+        self.lbl_title.setText("")
+        self.lbl_title.setObjectName("lbl_title")
 
         self.retranslateUi(Frame)
         QtCore.QMetaObject.connectSlotsByName(Frame)
