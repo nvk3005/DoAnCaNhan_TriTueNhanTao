@@ -183,9 +183,9 @@ Giao diện GUI của dự án được chia làm 4 trang chính:
 ## VI. Reinforcement Learning
 ### 1. Q-Learning
 |Trạng thái bắt đầu và Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
+|Trạng thái bắt đầu và Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
 | :--- | :---| :---|
-|![Image](https://github.com/user-attachments/assets/5bfa0d34-62fb-4861-8904-b045dc3567dc)|![alt text](image.png)|
-<p> Không tìm ra lời giải đến trạng thái đích</p>|
+|![Image](https://github.com/user-attachments/assets/5bfa0d34-62fb-4861-8904-b045dc3567dc)|![Image](https://github.com/user-attachments/assets/932fff57-15c1-4738-add6-3020f35b23b8)|<p>Không tìm ra lời giải đến trạng thái đích</p>|
 
 ### 2. Algorithm Performance Comparison
 #### Q-Learning
