@@ -51,11 +51,11 @@ class RESULT(QFrame, Ui_Frame):
         self.btn_StochchaticHC.clicked.connect(self.StochasticHC)
         self.btn_Sa.clicked.connect(self.SimulatedAnnealing)
         self.btn_Bs.clicked.connect(self.BeamSearch)
-        self.btn_AoStar.clicked.connect(self.AOStar)
+        self.btn_AoStar.clicked.connect(lambda: self.AOStar(30))
         self.btn_Test.clicked.connect(self.Test)
         self.btn_Backtracking.clicked.connect(lambda: self.Backtracking(Node(self.start_state), visited=set()))
         self.btn_AC3.clicked.connect(self.AC3)
-        self.btn_QLearning.clicked.connect(self.QLearning)
+        self.btn_QLearning.clicked.connect(self.Q_Learning)
 
         self.btn_Compare.clicked.connect(self.Graphic)
         self.btn_Reset.clicked.connect(self.Reset_State)
@@ -81,6 +81,8 @@ class RESULT(QFrame, Ui_Frame):
         return new_states
 
     def Bfs_Solve(self):
+        self.lbl_title.setText("BFS")
+
         queue = deque()
         visited = set()
 
@@ -101,6 +103,8 @@ class RESULT(QFrame, Ui_Frame):
         return None # Trả về thông báo không tìm thấy kết quả
     
     def Dfs_Solve(self):
+        self.lbl_title.setText("DFS")
+
         stack = []
         visited = set()
 
@@ -121,6 +125,8 @@ class RESULT(QFrame, Ui_Frame):
         return None # Trả về thông báo không tìm thấy kết quả
     
     def Ucs_Solve(self):
+        self.lbl_title.setText("UCS")
+
         pre = PriorityQueue()
         visited = set()
 
@@ -143,6 +149,8 @@ class RESULT(QFrame, Ui_Frame):
     
     
     def Ids_Solve(self):
+        self.lbl_title.setText("IDS")
+
         limit = 0
         while True:
             stack = [Node(self.start_state)]
@@ -183,6 +191,8 @@ class RESULT(QFrame, Ui_Frame):
 
 
     def Greedy(self):
+        self.lbl_title.setText("Greedy")
+
         pre = PriorityQueue()
         visited = set()
 
@@ -204,6 +214,8 @@ class RESULT(QFrame, Ui_Frame):
         return None # Trả về thông báo không tìm thấy kết quả
 
     def AStar(self):
+        self.lbl_title.setText("A*")
+
         pre = PriorityQueue()
         visited = set()
 
@@ -263,6 +275,7 @@ class RESULT(QFrame, Ui_Frame):
 
     
     def IdaStar(self):
+        self.lbl_title.setText("IDA*")
         threshold = self.heuristic(self.start_state)
 
         while True:
@@ -277,6 +290,7 @@ class RESULT(QFrame, Ui_Frame):
 
 
     def SimpleHillClimbing(self):
+        self.lbl_title.setText("Simple Hill Climbing")
         current_node = Node(self.start_state, h=self.heuristic(self.start_state))
 
         if current_node.current_state == self.destination_state:
@@ -322,6 +336,7 @@ class RESULT(QFrame, Ui_Frame):
         return best_state
 
     def SteepestAscentHillClimbing(self):
+        self.lbl_title.setText("Steepest Ascent Hill Climbing")
         current_node = Node(self.start_state, h=self.heuristic(self.start_state))
 
         if current_node.current_state == self.destination_state:
@@ -347,6 +362,7 @@ class RESULT(QFrame, Ui_Frame):
     import random
 
     def StochasticHC(self):
+        self.lbl_title.setText("Stochastic Hill Climbing")
         current_node = Node(self.start_state, h=self.heuristic(self.start_state))
 
         # Nếu trạng thái ban đầu là đích
@@ -387,37 +403,55 @@ class RESULT(QFrame, Ui_Frame):
             current_node = next_node
 
         # Trả về trạng thái hiện tại sau khi hết vòng lặp
-        messagebox.showinfo("Thông báo", "Không tìm thấy lời giải sau số lần lặp cho phép (Stochastic Hill Climbing)")
+        messagebox.showinfo("Thông báo", "Không tìm thấy lời giải bằng Stochastic Hill Climbing)")
 
 
     def SimulatedAnnealing(self):
-        current_node = Node(self.start_state, h = self.heuristic(self.start_state))
+        self.lbl_title.setText("Simulated Annealing")
+        
+        current_node = Node(self.start_state, h=self.heuristic(self.start_state))
+        
+        # Khởi tạo các biến cần thiết
+        temperature = 1000.0
+        cooling_rate = 0.99
+        
+        # Kiểm tra nếu trạng thái ban đầu đã là đích
         if current_node.current_state == self.destination_state:
             self.result = current_node.Path()
             self.compare_algorithms["SimulatedAnnealing"] = len(self.result)
             return self.Show()
-
-        temperature = 1000
-        cooling_rate = 0.99
-
+        
         while temperature > 1:
+            # Sinh ra một giải pháp lân cận ngẫu nhiên và tính chi phí của nó
             neighbors = self.generate_states(current_node.current_state)
+            if not neighbors:
+                break
+            
             next_state = random.choice(neighbors)
-
-            delta_e = self.heuristic(next_state) - self.heuristic(current_node.current_state)
-            if delta_e > 0 or random.uniform(0, 1) < math.exp(delta_e / temperature):
-                current_node = Node(next_state, current_node.current_state, h = self.heuristic(next_state))
-
-            if current_node.current_state == self.destination_state:
-                self.result = current_node.Path()
-                self.compare_algorithms["SimulatedAnnealing"] = len(self.result)
-                return self.Show()
-
+            next_node = Node(next_state, current_node, h=self.heuristic(next_state))
+            
+            # So sánh chi phí giữa giải pháp mới và giải pháp cũ
+            delta_cost = current_node.h - next_node.h
+            
+            # Nếu chi phí của giải pháp cũ lớn hơn giải pháp mới thì chọn giải pháp mới
+            if delta_cost > 0 or random.uniform(0, 1) < math.exp(delta_cost / temperature):
+                # Chấp nhận trạng thái mới
+                current_node = next_node
+        
+                # Kiểm tra xem đã đạt đến đích chưa
+                if current_node.current_state == self.destination_state:                
+                    self.result = current_node.Path()
+                    self.compare_algorithms["SimulatedAnnealing"] = len(self.result)
+                    return self.Show()
+            
+            # Giảm nhiệt độ theo tỷ lệ cooling_rate
             temperature *= cooling_rate
-
+        
+        # Nếu không tìm thấy giải pháp, hiển thị thông báo
         messagebox.showinfo("Thông báo", "Không tìm thấy lời giải bằng Simulated Annealing")
               
     def BeamSearch(self):
+        self.lbl_title.setText("Beam Search")
         current_node = Node(self.start_state, h = self.heuristic(self.start_state))
         if current_node.current_state == self.destination_state:
             self.result = current_node.Path()
@@ -446,55 +480,92 @@ class RESULT(QFrame, Ui_Frame):
             neighbors_beam.sort(key=lambda x: x.h)
             beam_list = neighbors_beam[:beam_width]
 
-    def AOStar(self):
-        open_list = {}  
-        closed_list = set() 
+    def AOStar(self, max_depth=30):
+        """
+        Thuật toán AO* Search để tìm đường đi từ trạng thái bắt đầu đến trạng thái đích
         
-        initial_node = Node(self.start_state, h=self.heuristic(self.start_state))
-        open_list[tuple(map(tuple, self.start_state))] = initial_node
+        Parameters:
+        - max_depth: Độ sâu tối đa được phép tìm kiếm
         
-        if initial_node.current_state == self.destination_state:
-            self.result = initial_node.Path()
-            self.compare_algorithms["AOStar"] = len(self.result)
+        Returns:
+        - Kết quả của hàm Show() nếu tìm thấy đường đi, hoặc None nếu không tìm thấy
+        """
+        self.lbl_title.setText("AO*")
+        
+        # Dictionary lưu trữ các trạng thái đã thăm để tránh tính toán lại
+        visited = {}
+        
+        def OR_Search(state: list, path: list, depth: int):
+            """
+            Thực hiện tìm kiếm OR - tìm một trạng thái tiếp theo thành công
+            """
+            # Chuyển state thành dạng hashable để sử dụng làm key trong dictionary
+            t_state = tuple(map(tuple, state))
+            
+            # Debug để kiểm tra tiến trình (có thể bỏ comment khi cần debug)
+            # print(f"OR_Search - Depth: {depth}, State: {state}")
+            
+            # Kiểm tra nếu đã đạt đến trạng thái đích
+            if state == self.destination_state:
+                return path + [state]
+            
+            # Phát hiện vòng lặp hoặc vượt quá độ sâu cho phép
+            if state in path or depth > max_depth:
+                return None
+            
+            # Kiểm tra nếu trạng thái này đã được thăm trước đó
+            if t_state in visited and visited[t_state] is not None:
+                return visited[t_state]
+            
+            # Lấy tất cả các trạng thái kề có thể đạt được
+            neighbors = self.generate_states(state)
+            
+            # Đảm bảo neighbors không rỗng
+            if not neighbors:
+                visited[t_state] = None
+                return None
+            
+            # Thử từng trạng thái kế tiếp cho đến khi tìm được đường đi thành công (OR)
+            for neighbor in neighbors:
+                result = AND_Search([neighbor], path + [state], depth + 1)
+                if result is not None:
+                    visited[t_state] = result  # Lưu result vào visited để sử dụng sau này
+                    return result
+            
+            # Không tìm thấy đường đi thành công
+            visited[t_state] = None
+            return None
+        
+        def AND_Search(states, path, depth):
+            """
+            Thực hiện tìm kiếm AND - tất cả các trạng thái phải thành công
+            """
+            # Trường hợp cơ sở: không còn trạng thái nào cần kiểm tra
+            if not states:
+                return path
+            
+            full_path = path
+            
+            # Mỗi trạng thái trong danh sách phải thành công (AND)
+            for state in states:
+                result = OR_Search(state, full_path, depth)
+                if result is None:
+                    return None
+                full_path = result
+            
+            return full_path
+        
+        # Bắt đầu tìm kiếm từ trạng thái khởi đầu
+        result = OR_Search(self.start_state, [], 0)
+        
+        if result:
+            self.result = result
+            self.compare_algorithms["AO*"] = len(result)
             return self.Show()
-        
-        # Lặp cho đến khi tìm thấy đường đi hoặc không còn nút nào để mở
-        while open_list:
-            # Chọn nút có f = g + h nhỏ nhất
-            current_key = min(open_list, key=lambda k: open_list[k].g + open_list[k].h)
-            current_node = open_list.pop(current_key)
-            
-            closed_list.add(current_key)
-            
-            if current_node.current_state == self.destination_state:
-                self.result = current_node.Path()
-                self.compare_algorithms["AOStar"] = len(self.result)
-                return self.Show()
-            
-            # Sinh ra các nút con
-            children = []
-            for new_state in self.generate_states(current_node.current_state):
-                child_key = tuple(map(tuple, new_state))
-                if child_key not in closed_list:
-                    g_new = current_node.g + 1
-                    h_new = self.heuristic(new_state)
-                    
-                    # Nếu nút con chưa có trong open_list hoặc có g mới tốt hơn
-                    if child_key not in open_list or g_new < open_list[child_key].g:
-                        # Tạo nút con mới và thêm vào open_list
-                        child_node = Node(new_state, current_node, g=g_new, h=h_new)
-                        open_list[child_key] = child_node
-                        children.append(child_node)
-            
-            # Xử lý AND-OR logic, dùng OR node
-            for child in children:
-                if child.current_state == self.destination_state:
-                    self.result = child.Path()
-                    self.compare_algorithms["AOStar"] = len(self.result)
-                    return self.Show()
-        
-        messagebox.showinfo("Thông báo", "Không tìm thấy lời giải bằng AO* Search")
-        return None
+        else:
+            # Hiển thị thông báo khi không tìm thấy đường đi
+            messagebox.showinfo("Thông báo", "Không tìm thấy lời giải bằng AO*")
+            return None
 
     def Test(self):
         pass
@@ -523,176 +594,131 @@ class RESULT(QFrame, Ui_Frame):
     def AC3(self):
         pass
 
-    def QLearning(self):
+    def Q_Learning(self):
         import numpy as np
-        
-        # Hàm chuyển đổi trạng thái thành string để làm key cho Q-table
-        def state_to_string(state):
-            return ''.join(''.join(row) for row in state).replace('', '0')
-        
-        # Hàm chuyển đổi string trở lại thành trạng thái ma trận 3x3
-        def string_to_state(state_str):
-            state = [['', '', ''], ['', '', ''], ['', '', '']]
-            for i in range(3):
-                for j in range(3):
-                    val = state_str[i*3 + j]
-                    state[i][j] = val if val != '0' else ''
-            return state
-        
-        # Các thông số cho Q-learning
-        alpha = 0.1      # Tỷ lệ học tập
-        gamma = 0.9      # Hệ số chiết khấu
-        epsilon = 0.3    # Tỷ lệ thăm dò
-        episodes = 1000  # Số lượng episodes
-        
-        # Khởi tạo Q-table ban đầu
-        q_table = {}
-        
-        # Hàm trả về reward
-        def get_reward(state):
-            # Reward lớn nếu đạt đến trạng thái đích
-            if state == self.destination_state:
-                return 100
-            
-            # Reward dựa trên số ô đúng vị trí
-            correct_tiles = 0
-            for i in range(3):
-                for j in range(3):
-                    if state[i][j] == self.destination_state[i][j]:
-                        correct_tiles += 1
-            
-            # Khuyến khích các trạng thái gần với trạng thái đích
-            return correct_tiles - 5  # Adjust penalty to encourage progress
-        
-        # Hàm lấy các hành động hợp lệ từ trạng thái hiện tại
-        def get_valid_actions(state):
-            blank_i, blank_j = self.find_blank(state)
-            valid_actions = []
-            
-            # Kiểm tra 4 hướng di chuyển (lên, xuống, trái, phải)
-            for move in self.moves:
-                new_i, new_j = blank_i + move[0], blank_j + move[1]
-                if 0 <= new_i < 3 and 0 <= new_j < 3:
-                    valid_actions.append(move)
-            
-            return valid_actions
-        
-        # Hàm thực hiện một hành động và trả về trạng thái mới
+        import random
+        import math
+
+        # Các thông số Q-learning
+        alpha = 0.3       # Tốc độ học
+        gamma = 0.9       # Hệ số chiết khấu
+        epsilon = 0.2     # Tỷ lệ khám phá
+        episodes = 1000   # Số vòng học
+        limitStep = 500   # Giới hạn số bước mỗi vòng
+
+        # Tạo Q-table với 9! trạng thái, 4 hành động
+        Q_table = np.zeros((math.factorial(9), 4))
+
+        # 4 hướng di chuyển: lên, xuống, trái, phải
+        moves = [(-1, 0), (1, 0), (0, -1), (0, 1)]
+
+        # Hàm chuyển đổi trạng thái từ list sang string
+        def convert_list_to_string(state):
+            return ''.join(state[i][j] if state[i][j] != '' else '0' 
+                for i in range(3) 
+                for j in range(3))
+
+        def permutation_index(state):
+            """
+            Chuyển trạng thái thành chỉ số duy nhất bằng khai triển Cantor
+            """
+            state = list(state)
+            index = 0
+            for i in range(len(state)):
+                # Chuyển đổi cả hai số thành int trước khi so sánh
+                count = sum(1 for x in state[i+1:] if x != '0' and int(x) < int(state[i]))
+                index += count * math.factorial(len(state) - i - 1)
+            return index
+
         def take_action(state, action):
-            blank_i, blank_j = self.find_blank(state)
-            new_i, new_j = blank_i + action[0], blank_j + action[1]
-            
-            if 0 <= new_i < 3 and 0 <= new_j < 3:
-                new_state = [row[:] for row in state]
-                new_state[blank_i][blank_j], new_state[new_i][new_j] = new_state[new_i][new_j], new_state[blank_i][blank_j]
-                return new_state
-            
-            return state  # Trả về trạng thái cũ nếu không thể di chuyển
-        
-        for episode in range(episodes):
-            # Bắt đầu từ trạng thái ban đầu
-            current_state = self.start_state
-            
-            # Đặt số bước tối đa cho mỗi episode
-            max_steps = 100
-            step = 0
-            
-            while step < max_steps:
-                step += 1
-                
-                # Chuyển đổi trạng thái thành string để làm key cho Q-table
-                state_str = state_to_string(current_state)
-                
-                # Lấy các hành động hợp lệ từ trạng thái hiện tại
-                valid_actions = get_valid_actions(current_state)
-                
-                # Nếu trạng thái chưa có trong Q-table, khởi tạo các giá trị Q cho trạng thái đó
-                if state_str not in q_table:
-                    q_table[state_str] = {tuple(action): 0.0 for action in valid_actions}
-                
-                # Chọn hành động dựa trên chiến lược epsilon-greedy
-                if np.random.uniform(0, 1) < epsilon:
-                    # Thăm dò: chọn hành động ngẫu nhiên
-                    action = valid_actions[np.random.choice(len(valid_actions))]
-                else:
-                    # Khai thác: chọn hành động có giá trị Q cao nhất
-                    action_values = q_table[state_str]
-                    # Lọc các hành động hợp lệ và chọn hành động tốt nhất
-                    valid_action_values = {a: action_values.get(a, 0.0) for a in [tuple(va) for va in valid_actions]}
-                    if valid_action_values:
-                        action = max(valid_action_values, key=valid_action_values.get)
-                    else:
-                        action = valid_actions[np.random.choice(len(valid_actions))]
-                
-                # Thực hiện hành động và nhận trạng thái mới
-                new_state = take_action(current_state, action)
-                reward = get_reward(new_state)
-                
-                # Cập nhật Q-table
-                new_state_str = state_to_string(new_state)
-                
-                # Nếu trạng thái mới chưa có trong Q-table, khởi tạo các giá trị Q cho trạng thái đó
-                if new_state_str not in q_table:
-                    new_valid_actions = get_valid_actions(new_state)
-                    q_table[new_state_str] = {tuple(action): 0.0 for action in new_valid_actions}
-                
-                # Tính giá trị Q mới
-                max_future_q = max(q_table[new_state_str].values()) if q_table[new_state_str] else 0
-                current_q = q_table[state_str].get(tuple(action), 0.0)
-                
-                # Công thức cập nhật Q-value
-                new_q = current_q + alpha * (reward + gamma * max_future_q - current_q)
-                q_table[state_str][tuple(action)] = new_q
-                
-                # Cập nhật trạng thái hiện tại
-                current_state = new_state
-                
-                # Nếu đạt đến trạng thái đích, kết thúc episode
-                if current_state == self.destination_state:
-                    print(f"Đã tìm thấy giải pháp sau {episode+1} episodes và {step} bước!")
-                    break
-            
-            # Giảm epsilon theo thời gian để giảm dần việc thăm dò
-            if episode % 100 == 0:
-                epsilon = max(0.1, epsilon * 0.95)
-        # Bắt đầu từ trạng thái ban đầu
-        current_node = Node(self.start_state)
-        
-        # Số bước tối đa để tránh vòng lặp vô hạn
-        max_steps = 100
-        step = 0
-        
-        while step < max_steps and current_node.current_state != self.destination_state:
-            step += 1
-            state_str = state_to_string(current_node.current_state)
-            
-            if state_str in q_table:
-                # Chọn hành động có giá trị Q cao nhất
-                valid_actions = get_valid_actions(current_node.current_state)
-                valid_action_tuples = [tuple(va) for va in valid_actions]
-                
-                # Lọc các hành động hợp lệ và chọn hành động tốt nhất
-                valid_q_values = {a: q_table[state_str].get(a, 0.0) for a in valid_action_tuples}
-                
-                if valid_q_values:
-                    best_action = max(valid_q_values, key=valid_q_values.get)
-                    new_state = take_action(current_node.current_state, best_action)
-                    new_node = Node(new_state, current_node)
-                    current_node = new_node
-                else:
-                    print("Không tìm thấy hành động hợp lệ trong Q-table!")
-                    break
+            """
+            Thực hiện hành động và trả về trạng thái mới và phần thưởng
+            """
+            index = state.index('0')
+            x, y = divmod(index, 3)
+            dx, dy = action
+            new_x, new_y = x + dx, y + dy
+            if 0 <= new_x < 3 and 0 <= new_y < 3:
+                new_index = new_x * 3 + new_y
+                state_list = list(state)
+                state_list[index], state_list[new_index] = state_list[new_index], state_list[index]
+                new_state = ''.join(state_list)
+                reward = 10 if new_state == goal else -1
+                return new_state, reward
+            return state, -1  # Phạt nếu di chuyển không hợp lệ
+
+        def choose_action(state):
+            """Chọn hành động theo epsilon-greedy"""
+            if random.uniform(0, 1) < epsilon:
+                return random.choice(moves)
             else:
-                print(f"Trạng thái {state_str} không có trong Q-table!")
-                break
+                state_idx = permutation_index(state)
+                best_action = np.argmax(Q_table[state_idx])
+                return moves[best_action]
+
+        # Lấy trạng thái bắt đầu và đích
+        start = convert_list_to_string(self.start_state)
+        goal = convert_list_to_string(self.destination_state)
+
+        print(f"Trạng thái bắt đầu: {start}")
+        print(f"Trạng thái đích: {goal}")
+
+        # Bắt đầu huấn luyện
+        for episode in range(episodes):
+            state = start
+            for step in range(limitStep):
+                idx = permutation_index(state)
+                action = choose_action(state)
+                next_state, reward = take_action(state, action)
+                nidx = permutation_index(next_state)
+
+                action_idx = moves.index(action)
+                old_value = Q_table[idx, action_idx]
+                next_max = np.max(Q_table[nidx])
+                Q_table[idx, action_idx] += alpha * (reward + gamma * next_max - old_value)
+
+                state = next_state
+                if state == goal:
+                    break
+
+        # Tìm đường đi tốt nhất sau khi học xong
+        state = start
+        path = [start]
+        visited = set([start])
         
-        if current_node.current_state == self.destination_state:
-            self.result = current_node.Path()
-            self.compare_algorithms["Q-Learning"] = len(self.result)
-            return self.Show()
-        else:
-            messagebox.showinfo("Thông báo", "Không tìm thấy lời giải bằng Q-Learning")
-            return None
+        while state != goal:
+            idx = permutation_index(state)
+            action_idx = np.argmax(Q_table[idx])
+            next_state, reward = take_action(state, moves[action_idx])
+            
+            if next_state in visited or next_state == state:
+                messagebox.showinfo("Thông báo", "Không tìm thấy lời giải bằng Q-learning")
+                return False, None
+            
+            path.append(next_state)
+            visited.add(next_state)
+            state = next_state
+            
+            if len(path) > 200:
+                messagebox.showinfo("Thông báo", "Không tìm thấy lời giải bằng Q-learning")
+                return False, None
+
+        # Chuyển đổi đường đi từ chuỗi sang ma trận
+        def convert_string_to_matrix(state_str):
+            matrix = [['', '', ''] for _ in range(3)]
+            for i in range(9):
+                row, col = divmod(i, 3)
+                if state_str[i] != '0':
+                    matrix[row][col] = state_str[i]
+            return matrix
+        
+        # Chuyển đổi đường đi từ chuỗi sang ma trận
+        path_matrices = [convert_string_to_matrix(state_str) for state_str in path]
+        
+        self.result = path_matrices
+        self.compare_algorithms["Q-learning"] = len(path) - 1  # Số bước di chuyển
+        
+        return True, self.Show()
         
     def Show(self):
         if self.result:
@@ -700,24 +726,51 @@ class RESULT(QFrame, Ui_Frame):
             self.timer.start(500) 
     
     def update_ui(self):
-        if self.current_step < len(self.result):  # Kiểm tra nếu chưa hết danh sách
+        if self.current_step < len(self.result):
             state = self.result[self.current_step]
+            
+            # Kiểm tra nếu state là chuỗi (từ Q-Learning)
+            if isinstance(state, str):
+                # Chuyển chuỗi thành ma trận 3x3
+                state_matrix = [
+                    [state[i*3 + j] for j in range(3)]
+                    for i in range(3)
+                ]
+                state = state_matrix
+                
+            # Cập nhật UI
             for i in range(3):
                 for j in range(3):
                     self.labels[i][j].setText(state[i][j])
-                    self.lbl_Step.setText(str(self.current_step))
-
-            self.current_step += 1  # Chuyển sang bước tiếp theo
+            self.lbl_Step.setText(str(self.current_step))
+            
+            self.current_step += 1
         else:
-            self.timer.stop()  # Dừng timer khi đã hiển thị xong
+            self.timer.stop()
+
+    import matplotlib.pyplot as plt
+
     def Graphic(self):
         algorithms = list(self.compare_algorithms.keys())
         steps = list(self.compare_algorithms.values())
-        plt.bar(algorithms, steps, color='skyblue')
-        plt.xlabel("Thuật toán")
-        plt.ylabel("Số bước")
-        plt.title("So sánh số bước của các thuật toán")
+
+        plt.figure(figsize=(10, 6))
+        bars = plt.bar(algorithms, steps, color='skyblue')
+
+        # Ghi số bước lên đầu mỗi cột
+        for bar, step in zip(bars, steps):
+            height = bar.get_height()
+            plt.text(bar.get_x() + bar.get_width() / 2, height + 0.5, str(step-1), 
+                    ha='center', va='bottom', fontsize=10, color='black')
+
+        # Đặt tiêu đề và nhãn
+        plt.xlabel("Thuật toán", fontsize=12)
+        plt.ylabel("Số bước", fontsize=12)
+        plt.title("Biểu đồ so sánh số bước thực hiện của các thuật toán tìm kiếm", fontsize=14)
+        plt.xticks(rotation=30)
+        plt.tight_layout()
         plt.show()
+
 
     def Reset_State(self):
         for i in range(3):
@@ -725,4 +778,5 @@ class RESULT(QFrame, Ui_Frame):
                 self.labels[i][j].setText(self.start_state[i][j])
         self.lbl_Step.setText('0')
         self.result = []
+        self.lbl_title.setText("")
         QApplication.processEvents()
