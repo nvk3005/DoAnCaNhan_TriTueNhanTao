@@ -8,6 +8,7 @@
 3. [Cách thức hoạt động của dự án](#%EF%B8%8F-cách-thức-hoạt-động-của-dự-án)
 4. [Cách chạy dự án](#%EF%B8%8F-cách-để-chạy-dự-án)
 5. [Các thuật toán được sử dụng trong dự án](#-các-thuật-toán-được-sử-dụng-trong-dự-án)
+6. [Kết luận](#-kết-luận)
 
 ## 🧠 Giới thiệu tổng quan về dự án
 Dự án được xây dựng nhằm mục đích nghiên cứu, đánh giá hiệu suất của các thuật toán thuộc các nhóm thuật toán khác nhau như Uninformed Search Algorithms, Informed Search Algorithms, Local Search Algorithms, Searching with Nondeterministic, Constraint Satisfaction Problem, Reinforcement Learning.
@@ -71,8 +72,9 @@ Giao diện GUI của dự án được chia làm 4 trang chính:
 
 ## I. Uninformed Search Algorithms
 - Các thành phần của bài toán tìm kiếm
-  - Trạng thái bắt đầu: Ma trận 3x3 với 8 số từ 1-8 và 1 ô trống
-  - Tập hành động: Gồm các hành động: UP, DOWN, LEFT, RIGHT (di chuyển ô trống tương ứng).
+  - Trạng thái bắt đầu: Ma trận 3x3 với 8 số từ 1-8 không trùng lặp và 1 ô trống
+  - Trạng thái mục tiêu: Ma trận 3x3 với 8 số từ 1-8 không trùng lặp và 1 ô trống
+  - Tập hành động: Gồm các hành động: UP, DOWN, LEFT, RIGHT (di chuyển ô trống tương ứng)
   - Chi phí đường đi: Mỗi hành động di chuyển có chi phí bằng 1
   - Solution: Một solution (lời giải) là một chuỗi các hành động hợp lệ biến trạng thái ban đầu thành trạng thái mục tiêu.
 ### 1. Breadth-First Search
@@ -105,6 +107,13 @@ Giao diện GUI của dự án được chia làm 4 trang chính:
 - **UCS** cũng cho lời giải tối ưu về số bước như BFS, nhưng thời gian thực thi cao nhất trong các thuật toán do phải quản lý hàng đợi ưu tiên và kiểm tra chi phí liên tục.
 
 ## II. Informed Search Algorithms
+- Các thành phần của bài toán tìm kiếm
+  - Trạng thái bắt đầu: Ma trận 3x3 với 8 số từ 1-8 và 1 ô trống
+  - Trạng thái mục tiêu: Ma trận 3x3 với 8 số từ 1-8 không trùng lặp và 1 ô trống
+  - Tập hành động: Gồm các hành động: UP, DOWN, LEFT, RIGHT (di chuyển ô trống tương ứng)
+  - Chi phí đường đi: Mỗi hành động di chuyển có chi phí bằng 1
+  - Hàm heuristic h(n): Dự đoán chi phí còn lại từ trạng thái hiện tại n đến đích.
+  - Solution: Một solution (lời giải) là một chuỗi các hành động hợp lệ biến trạng thái ban đầu thành trạng thái mục tiêu.
 ### 1. A* Search
 |Trạng thái bắt đầu và Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
 | :--- | :---| :---|
@@ -129,6 +138,13 @@ Giao diện GUI của dự án được chia làm 4 trang chính:
 - **IDA\*** cũng tìm đường đi tối ưu (23 bước) như **A\***, nhưng thời gian thực thi lâu hơn (0.099s) do phải lặp lại nhiều vòng lặp sâu dần
 
 ## III. Local Search Algorithms
+- Các thành phần của bài toán tìm kiếm
+  - Trạng thái bắt đầu: Ma trận 3x3 với 8 số từ 1-8 và 1 ô trống
+  - Trạng thái mục tiêu: Ma trận 3x3 với 8 số từ 1-8 không trùng lặp và 1 ô trống
+  - Tập hành động: Gồm các hành động: UP, DOWN, LEFT, RIGHT (di chuyển ô trống tương ứng).
+  - Trạng thái lân cận:	Các trạng thái có thể đạt được bằng 1 bước đi.
+  - Hàm đánh giá: Đo "độ tốt" của trạng thái.
+  - Solution: Một solution (lời giải) là một chuỗi các hành động hợp lệ biến trạng thái ban đầu thành trạng thái mục tiêu.
 ### 1. Simple Hill Climbing
 |Trạng thái bắt đầu và Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
 | :--- | :---| :---|
@@ -159,6 +175,8 @@ Giao diện GUI của dự án được chia làm 4 trang chính:
 - Beam Search tìm ra lời giải sau 133 bước, số bước lớn cho thấy lời giải không tối ưu. Dù thời gian thực thi nhanh (0.017s), thuật toán dễ bỏ sót trạng thái tiềm năng do chỉ giữ lại số lượng giới hạn trạng thái tốt nhất ở mỗi bước. Vì vậy, hiệu quả phụ thuộc nhiều vào giá trị hàm heuristic và độ may mắn.
 
 ## IV. Searching with Nondeterministic
+- Các thành phần của bài toán tìm kiếm
+  - 
 ### 1. AND OR Search
 |Trạng thái bắt đầu và Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
 | :--- | :---| :---|
@@ -191,6 +209,16 @@ Giao diện GUI của dự án được chia làm 4 trang chính:
 ### 3. AC-3
 
 ## VI. Reinforcement Learning
+- Các thành phần của bài toán tìm kiếm
+  - Trạng thái bắt đầu: Ma trận 3x3 với 8 số từ 1-8 và 1 ô trống
+  - Trạng thái mục tiêu: Ma trận 3x3 với 8 số từ 1-8 không trùng lặp và 1 ô trống
+  - Tập hành động: Gồm các hành động: UP, DOWN, LEFT, RIGHT (di chuyển ô trống tương ứng).
+  - Hàm phần thưởng: Hàm xác định phần thưởng nếu đi được đến trạng thái đích hoặc bị phạt nếu đi sai
+  - Hệ số chiết khấu (γ)
+  - Tốc độ học (α)
+  - Q_table: Lưu giá trị hành động (Q(s, a)) 
+  - Chính sách hành động (Policy): Sử dụng epsilon-greedy để cân bằng giữa khai thác và khám phá
+  - Solution: Một solution (lời giải) là một chuỗi các hành động hợp lệ biến trạng thái ban đầu thành trạng thái mục tiêu.
 ### 1. Q-Learning
 |Trạng thái bắt đầu và Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
 |Trạng thái bắt đầu và Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
@@ -201,4 +229,6 @@ Giao diện GUI của dự án được chia làm 4 trang chính:
 #### Q-Learning
 - Thuật toán Q-Learning không thể tìm ra lời giải cho game 8 Puzzle với trạng thái đã khởi tạo điều này có thể do 1 số lý do như chưa đủ số vòng lặp học (episodes). Số lượng trạng thái của game lớn nên có thể agent chưa từng đi con đường đó trong quá trình training → Q-table có thể không đủ thông tin để tìm được đường đi.
 
+## ✅ Kết luận
+- Thông qua quá trình thực hiện dự án áp dụng các thuật toán giải bài toán 8 Puzzle, tôi đã có cơ hội ôn tập và hệ thống lại những kiến thức đã được học trên lớp một cách hiệu quả. Việc trực tiếp triển khai và theo dõi quá trình hoạt động của từng thuật toán không chỉ giúp tôi nắm vững cách cài đặt mà còn hiểu sâu hơn về cơ chế hoạt động của chúng. Đặc biệt, dự án đã giúp tôi nhận ra rõ ràng những ưu điểm và hạn chế của từng thuật toán, từ đó rút ra được bài học kinh nghiệm trong việc lựa chọn và áp dụng thuật toán phù hợp cho từng bài toán cụ thể.
 
