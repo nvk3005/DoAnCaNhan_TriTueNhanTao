@@ -87,15 +87,17 @@ Giao diện GUI của dự án được chia làm 4 trang chính:
 | :--- | :---| :---|
 |![Image](https://github.com/user-attachments/assets/5bfa0d34-62fb-4861-8904-b045dc3567dc)|![Image](https://github.com/user-attachments/assets/6809a94f-4b8b-46b9-8c24-b6c6a7f155d6)|<p>Steps: 27</p>|
 ### 5. Algorithm Performance Comparison
-|Biểu đồ so sánh số bước giữa các thuật toán trong nhóm Uninformed Search Algorithms|
+|Biểu đồ so sánh giữa các thuật toán trong nhóm Uninformed Search Algorithms|
 | :--- |
 |![Image](https://github.com/user-attachments/assets/b7a7f62c-9c8f-49dc-af04-2af7e8566244)|
-#### BFS (Breadth-First Search) và UCS (Uniform Cost Search):
-- Đều đạt số bước giải khá nhỏ **23** bước cho thấy việc áp dụng 2 thuật toán này để tìm ra lời giải là khá tối ưu. Trong bài toán này chi phí mỗi bước đều bằng nhau và bằng 1 nên **UCS** cũng được áp dụng như **BFS**
+#### BFS (Breadth-First Search):
+- **BFS** cho lời giải với số bước rất ít (tối ưu), nhưng thời gian thực thi tương đối cao do phải duyệt rộng và lưu trữ nhiều trạng thái trong bộ nhớ.
 #### DFS (Depth-First Search): 
-- Cần tới **7113** bước để tìm ra lời giải cho thấy việc không hiệu khi đi sâu vào nhánh không tối ưu.
+- **DFS** có tốc độ thực thi rất nhanh nhờ đi sâu liên tục, nhưng số bước thực hiện lại rất lớn, cho thấy thuật toán dễ đi vào nhánh không tối ưu và không đảm bảo lời giải ngắn nhất.
 #### IDS (Iterative Deepening Search):
-- Cần **27** bước để tìm ra lời giải cho thấy sự hiệu quả của việc cải tiến thuật toán DFS bằng cách giới hạn độ sâu tìm kiếm.
+- **IDS** có số bước gần với tối ưu và thời gian thực thi khá tốt, nhờ kết hợp lợi thế của **DFS** và **BFS**.
+#### USC (Uniform Cost Search)
+- **UCS** cũng cho lời giải tối ưu về số bước như BFS, nhưng thời gian thực thi cao nhất trong các thuật toán do phải quản lý hàng đợi ưu tiên và kiểm tra chi phí liên tục.
 
 ## II. Informed Search Algorithms
 ### 1. A* Search
@@ -111,15 +113,15 @@ Giao diện GUI của dự án được chia làm 4 trang chính:
 | :--- | :---| :---|
 |![Image](https://github.com/user-attachments/assets/5bfa0d34-62fb-4861-8904-b045dc3567dc)|![Image](https://github.com/user-attachments/assets/1c6a6b4e-a560-46e6-9a5d-f7e39f9a2e73)|<p>Steps: 23</p>|
 ### 4. Algorithm Performance Comparison
-|Biểu đồ so sánh số bước giữa các thuật toán trong nhóm Informed Search Algorithms|
+|Biểu đồ so sánh giữa các thuật toán trong nhóm Informed Search Algorithms|
 | :--- |
 |![Image](https://github.com/user-attachments/assets/5c686a0c-cdd0-41d6-acb4-b5432981beac)|
 #### A* Search
-- Việc kết hợp chi phí thực tế g và chi phí ước tính h thuật toán A* đã tìm ra đường đi tối ưu cả về số bước (**23** bước) và thời gian tìm ra lời giải của thuật toán.
+- **A\*** là thuật toán hiệu quả nhất: cho đường đi tối ưu (**23 bước**) và thời gian thực thi gần như tức thời (0.000s), nhờ kết hợp giữa chi phí thực tế (g) và chi phí ước lượng heuristic (h).
 #### Greedy Best-First Search
-- Thuật toán này mất **47** bước để tìm ra lời giải, số bước nhiều hơn A* vì thuật toán chỉ xét hàm heuristic h(n), bỏ qua chi phí thực tế. Nên bài toán thuật toán chỉ tìm ra lời giải nhanh chứ không xét tới tính tối ưu.
+- **Greedy** có thời gian thực thi nhanh (0.012s) nhưng phải qua nhiều bước hơn (**47 bước**) vì chỉ xét hàm heuristic mà không quan tâm đến chi phí thực tế, nên không đảm bảo tối ưu.
 #### Iterative Deepening A*
-- Cũng tìm đường đi tối ưu như A* sau (**23** bước), nhưng sử dụng ít bộ nhớ hơn do dựa trên tìm kiếm theo chiều sâu.
+- **IDA\*** cũng tìm đường đi tối ưu (23 bước) như **A\***, nhưng thời gian thực thi lâu hơn (0.099s) do phải lặp lại nhiều vòng lặp sâu dần
 
 ## III. Local Search Algorithms
 ### 1. Simple Hill Climbing
@@ -143,13 +145,13 @@ Giao diện GUI của dự án được chia làm 4 trang chính:
 | :--- | :---| :---|
 |![Image](https://github.com/user-attachments/assets/5bfa0d34-62fb-4861-8904-b045dc3567dc)|![Image](https://github.com/user-attachments/assets/f629404c-51cf-4575-8a29-900e57af9f50)|<p>Steps: 133</p>|
 ### 6. Algorithm Performance Comparison
-|Biểu đồ so sánh số bước giữa các thuật toán trong nhóm Local Search Algorithms|
+|Biểu đồ so sánh giữa các thuật toán trong nhóm Local Search Algorithms|
 | :--- |
 |![Image](https://github.com/user-attachments/assets/6f4698f5-16d6-491f-a56d-7b7550fef442)|
 #### Simple Hill Climbing, Steepest Ascent Hill Climbing, Stochastic Hill Climbing, Simulated Annealing
 - Các thuất toán nhóm Local Search này áp dụng cho game 8 Puzzle đều không thể tìm ra lời giải vì dễ bị mắc kẹt ở **Local optimum (cực trị địa phương)**. Các thuật này chỉ hoạt động nếu tìm được trạng thái tốt hơn trạng thái hiện tại nếu không thuật toán sẽ dừng lại. 
 #### Beam Search
-- Beam Search tìm ra lời giải sau 133 bước. Beam Search sẽ giữ lại k trạng thái tốt nhất ở mỗi bước, dựa trên giá trị hàm heuristic đánh giá mức độ gần với trạng thái đích, và loại bỏ các trạng thái còn lại, kể cả khi chúng có tiềm năng dẫn đến lời giải. Nên nếu may mắn vẫn có thể tìm ra lời giải nhưng sẽ không tối ưu
+- Beam Search tìm ra lời giải sau 133 bước, số bước lớn cho thấy lời giải không tối ưu. Dù thời gian thực thi nhanh (0.017s), thuật toán dễ bỏ sót trạng thái tiềm năng do chỉ giữ lại số lượng giới hạn trạng thái tốt nhất ở mỗi bước. Vì vậy, hiệu quả phụ thuộc nhiều vào giá trị hàm heuristic và độ may mắn.
 
 ## IV. Searching with Nondeterministic
 ### 1. AND OR Search
@@ -165,7 +167,7 @@ Giao diện GUI của dự án được chia làm 4 trang chính:
 | :--- | :---| :---|
 |![Image](https://github.com/user-attachments/assets/3c4e28f4-10e0-48e8-bd2d-b01870909915)|![Image](https://github.com/user-attachments/assets/e88b0db4-1ebc-45fe-a3d8-70c1d58487ad)|<p>Không tìm ra lời giải đến trạng thái đích</p>|
 ### 4. Algorithm Performance Comparison
-|Biểu đồ so sánh số bước giữa các thuật toán trong nhóm Searching with Nondeterministic|
+|Biểu đồ so sánh giữa các thuật toán trong nhóm Searching with Nondeterministic|
 | :--- |
 |![Image](https://github.com/user-attachments/assets/155eede9-6d2d-400a-b880-9398b55a157b)|
 #### AND OR Search
@@ -193,3 +195,5 @@ Giao diện GUI của dự án được chia làm 4 trang chính:
 ### 2. Algorithm Performance Comparison
 #### Q-Learning
 - Thuật toán Q-Learning không thể tìm ra lời giải cho game 8 Puzzle với trạng thái đã khởi tạo điều này có thể do 1 số lý do như chưa đủ số vòng lặp học (episodes). Số lượng trạng thái của game lớn nên có thể agent chưa từng đi con đường đó trong quá trình training → Q-table có thể không đủ thông tin để tìm được đường đi.
+
+
