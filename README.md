@@ -70,6 +70,11 @@ Giao diện GUI của dự án được chia làm 4 trang chính:
   - [2. Algorithm Performance Comparison](#2-algorithm-performance-comparison)
 
 ## I. Uninformed Search Algorithms
+- Các thành phần của bài toán tìm kiếm
+  - Trạng thái bắt đầu: Ma trận 3x3 với 8 số từ 1-8 và 1 ô trống
+  - Tập hành động: Gồm các hành động: UP, DOWN, LEFT, RIGHT (di chuyển ô trống tương ứng).
+  - Chi phí đường đi: Mỗi hành động di chuyển có chi phí bằng 1
+  - Solution: Một solution (lời giải) là một chuỗi các hành động hợp lệ biến trạng thái ban đầu thành trạng thái mục tiêu.
 ### 1. Breadth-First Search
 |Trạng thái bắt đầu và Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
 | :--- | :---| :---|
