@@ -89,7 +89,7 @@ Giao diện GUI của dự án được chia làm 4 trang chính:
 ### 5. Algorithm Performance Comparison
 |Biểu đồ so sánh số bước giữa các thuật toán trong nhóm Uninformed Search Algorithms|
 | :--- |
-|![Image](https://github.com/user-attachments/assets/6cb02bff-5702-4076-a325-583bfc1a42fd)|
+|![Image](https://github.com/user-attachments/assets/b7a7f62c-9c8f-49dc-af04-2af7e8566244)|
 #### BFS (Breadth-First Search) và UCS (Uniform Cost Search):
 - Đều đạt số bước giải khá nhỏ **23** bước cho thấy việc áp dụng 2 thuật toán này để tìm ra lời giải là khá tối ưu. Trong bài toán này chi phí mỗi bước đều bằng nhau và bằng 1 nên **UCS** cũng được áp dụng như **BFS**
 #### DFS (Depth-First Search): 
@@ -113,7 +113,7 @@ Giao diện GUI của dự án được chia làm 4 trang chính:
 ### 4. Algorithm Performance Comparison
 |Biểu đồ so sánh số bước giữa các thuật toán trong nhóm Informed Search Algorithms|
 | :--- |
-|![Image](https://github.com/user-attachments/assets/f0540d87-0c90-41d3-b81a-9c032c788fa5)|
+|![Image](https://github.com/user-attachments/assets/5c686a0c-cdd0-41d6-acb4-b5432981beac)|
 #### A* Search
 - Việc kết hợp chi phí thực tế g và chi phí ước tính h thuật toán A* đã tìm ra đường đi tối ưu cả về số bước (**23** bước) và thời gian tìm ra lời giải của thuật toán.
 #### Greedy Best-First Search
@@ -145,7 +145,7 @@ Giao diện GUI của dự án được chia làm 4 trang chính:
 ### 6. Algorithm Performance Comparison
 |Biểu đồ so sánh số bước giữa các thuật toán trong nhóm Local Search Algorithms|
 | :--- |
-|![Image](https://github.com/user-attachments/assets/ccfcb007-10ec-477e-996f-f512f2982869)|
+|![Image](https://github.com/user-attachments/assets/6f4698f5-16d6-491f-a56d-7b7550fef442)|
 #### Simple Hill Climbing, Steepest Ascent Hill Climbing, Stochastic Hill Climbing, Simulated Annealing
 - Các thuất toán nhóm Local Search này áp dụng cho game 8 Puzzle đều không thể tìm ra lời giải vì dễ bị mắc kẹt ở **Local optimum (cực trị địa phương)**. Các thuật này chỉ hoạt động nếu tìm được trạng thái tốt hơn trạng thái hiện tại nếu không thuật toán sẽ dừng lại. 
 #### Beam Search
@@ -165,6 +165,9 @@ Giao diện GUI của dự án được chia làm 4 trang chính:
 | :--- | :---| :---|
 |![Image](https://github.com/user-attachments/assets/3c4e28f4-10e0-48e8-bd2d-b01870909915)|![Image](https://github.com/user-attachments/assets/e88b0db4-1ebc-45fe-a3d8-70c1d58487ad)|<p>Không tìm ra lời giải đến trạng thái đích</p>|
 ### 4. Algorithm Performance Comparison
+|Biểu đồ so sánh số bước giữa các thuật toán trong nhóm Searching with Nondeterministic|
+| :--- |
+|![Image](https://github.com/user-attachments/assets/155eede9-6d2d-400a-b880-9398b55a157b)|
 #### AND OR Search
 - **AO\*** đã tìm ra lời giải sau 31 bước cho thấy thuật toán đã hoạt động hiệu quả bằng cách sử dụng kết hợp AND và OR trong tìm kiếm, phù hợp với bài toán có cấu trúc rẽ nhánh và cần đánh giá nhiều khả năng kế tiếp. Bên cạnh đó nhờ việc sử dụng visited giúp tránh trạng thái đã thăm, giảm thiểu lặp vô hạn và tăng hiệu quả tìm kiếm. Đồng thời giới hạn độ sâu để tránh lan rộng không kiểm soát
 #### Searching with No Observation
@@ -190,5 +193,3 @@ Giao diện GUI của dự án được chia làm 4 trang chính:
 ### 2. Algorithm Performance Comparison
 #### Q-Learning
 - Thuật toán Q-Learning không thể tìm ra lời giải cho game 8 Puzzle với trạng thái đã khởi tạo điều này có thể do 1 số lý do như chưa đủ số vòng lặp học (episodes). Số lượng trạng thái của game lớn nên có thể agent chưa từng đi con đường đó trong quá trình training → Q-table có thể không đủ thông tin để tìm được đường đi.
-
-
