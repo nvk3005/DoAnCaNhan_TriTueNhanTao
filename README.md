@@ -154,13 +154,15 @@ Giao diện GUI của dự án được chia làm 4 trang chính:
 - **IDA\*** cũng tìm đường đi tối ưu (23 bước) như **A\***, nhưng thời gian thực thi lâu hơn (0.099s) do phải lặp lại nhiều vòng lặp sâu dần
 
 ## III. Local Search Algorithms
-- Các thành phần của bài toán tìm kiếm
-  - Trạng thái bắt đầu: Ma trận 3x3 với 8 số từ 1-8 và 1 ô trống
-  - Trạng thái mục tiêu: Ma trận 3x3 với 8 số từ 1-8 không trùng lặp và 1 ô trống
-  - Tập hành động: Gồm các hành động: UP, DOWN, LEFT, RIGHT (di chuyển ô trống tương ứng).
-  - Trạng thái lân cận:	Các trạng thái có thể đạt được bằng 1 bước đi.
-  - Hàm đánh giá: Đo "độ tốt" của trạng thái.
-  - Solution: Một solution (lời giải) là một chuỗi các hành động hợp lệ biến trạng thái ban đầu thành trạng thái mục tiêu.
+| Thành phần        | Mô tả                                                                 |
+|-------------------|------------------------------------------------------------------------|
+| Trạng thái bắt đầu | Ma trận 3x3 gồm 8 số từ 1 đến 8 (không trùng) và 1 ô trống.                         |
+| Trạng thái mục tiêu| Ma trận 3x3 gồm 8 số từ 1 đến 8 (không trùng) và 1 ô trống, sắp xếp đúng thứ tự. |
+| Tập hành động      | Gồm các hành động: UP, DOWN, LEFT, RIGHT (di chuyển ô trống tương ứng). |
+| Trạng thái lân cận | Các trạng thái có thể đạt được từ trạng thái hiện tại bằng 1 bước di chuyển. |
+| Hàm đánh giá       | Hàm đo "độ tốt" của trạng thái, ví dụ như số ô sai vị trí hoặc khoảng cách Manhattan. |
+| Solution (Lời giải)| Một chuỗi các hành động hợp lệ biến trạng thái ban đầu thành trạng thái mục tiêu. |
+
 ### 1. Simple Hill Climbing
 |Trạng thái bắt đầu và Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
 | :--- | :---| :---|
