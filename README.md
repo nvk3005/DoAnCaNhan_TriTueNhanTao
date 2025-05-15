@@ -56,7 +56,8 @@ Giao diện GUI của dự án được chia làm 4 trang chính:
   - [3. Stochastic Hill Climbing](#3-stochastic-hill-climbing)
   - [4. Simulated Annealing](#4-simulated-annealing)
   - [5. Beam Search](#5-beam-search)
-  - [6. Algorithm Performance Comparison](#6-algorithm-performance-comparison)
+  - [6. GeneticAlgorithm](#6-geneticalgorithm)
+  - [7. Algorithm Performance Comparison](#7-algorithm-performance-comparison)
 - [IV. Searching with Nondeterministic](#iv-searching-with-nondeterministic)
   - [1. AND OR Search](#1-and-or-search)
   - [2. Searching with No Observation](#2-searching-with-no-observation)
@@ -87,12 +88,13 @@ Giao diện GUI của dự án được chia làm 4 trang chính:
 
 ## B. Nội dung
 ## I. Uninformed Search Algorithms
-- Các thành phần của bài toán tìm kiếm
-  - Trạng thái bắt đầu: Ma trận 3x3 với 8 số từ 1-8 không trùng lặp và 1 ô trống
-  - Trạng thái mục tiêu: Ma trận 3x3 với 8 số từ 1-8 không trùng lặp và 1 ô trống
-  - Tập hành động: Gồm các hành động: UP, DOWN, LEFT, RIGHT (di chuyển ô trống tương ứng)
-  - Chi phí đường đi: Mỗi hành động di chuyển có chi phí bằng 1
-  - Solution: Một solution (lời giải) là một chuỗi các hành động hợp lệ biến trạng thái ban đầu thành trạng thái mục tiêu.
+| **Thành phần**       | **Mô tả**                                                                 |
+|----------------------|---------------------------------------------------------------------------|
+| Trạng thái bắt đầu   | Ma trận 3x3 với 8 số từ 1 đến 8 không trùng lặp và 1 ô trống              |
+| Trạng thái mục tiêu  | Ma trận 3x3 với 8 số từ 1 đến 8 không trùng lặp và 1 ô trống, sắp xếp đúng thứ tự.              |
+| Tập hành động        | Các hành động: UP, DOWN, LEFT, RIGHT (di chuyển ô trống tương ứng)       |
+| Chi phí đường đi     | Mỗi hành động di chuyển có chi phí bằng 1                                |
+| Lời giải           | Một chuỗi các hành động hợp lệ biến trạng thái ban đầu thành trạng thái mục tiêu |
 ### 1. Breadth-First Search
 |Trạng thái bắt đầu và Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
 | :--- | :---| :---|
@@ -123,13 +125,15 @@ Giao diện GUI của dự án được chia làm 4 trang chính:
 - **UCS** cũng cho lời giải tối ưu về số bước như BFS, nhưng thời gian thực thi cao nhất trong các thuật toán do phải quản lý hàng đợi ưu tiên và kiểm tra chi phí liên tục.
 
 ## II. Informed Search Algorithms
-- Các thành phần của bài toán tìm kiếm
-  - Trạng thái bắt đầu: Ma trận 3x3 với 8 số từ 1-8 và 1 ô trống
-  - Trạng thái mục tiêu: Ma trận 3x3 với 8 số từ 1-8 không trùng lặp và 1 ô trống
-  - Tập hành động: Gồm các hành động: UP, DOWN, LEFT, RIGHT (di chuyển ô trống tương ứng)
-  - Chi phí đường đi: Mỗi hành động di chuyển có chi phí bằng 1
-  - Hàm heuristic h(n): Dự đoán chi phí còn lại từ trạng thái hiện tại n đến đích.
-  - Solution: Một solution (lời giải) là một chuỗi các hành động hợp lệ biến trạng thái ban đầu thành trạng thái mục tiêu.
+| **Thành phần**        | **Mô tả**                                                                 |
+|------------------------|---------------------------------------------------------------------------|
+| Trạng thái bắt đầu     | Ma trận 3x3 với 8 số từ 1 đến 8 và 1 ô trống                              |
+| Trạng thái mục tiêu    | Ma trận 3x3 với 8 số từ 1 đến 8 không trùng lặp và 1 ô trống, sắp xếp theo đúng thứ tự.              |
+| Tập hành động          | Các hành động: UP, DOWN, LEFT, RIGHT (di chuyển ô trống tương ứng)       |
+| Chi phí đường đi       | Mỗi hành động di chuyển có chi phí bằng 1                                |
+| Hàm heuristic h(n)     | Dự đoán chi phí còn lại từ trạng thái hiện tại `n` đến trạng thái đích   |
+| Lời giải           | Chuỗi các hành động hợp lệ biến trạng thái ban đầu thành trạng thái mục tiêu |
+
 ### 1. A* Search
 |Trạng thái bắt đầu và Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
 | :--- | :---| :---|
@@ -154,14 +158,14 @@ Giao diện GUI của dự án được chia làm 4 trang chính:
 - **IDA\*** cũng tìm đường đi tối ưu (23 bước) như **A\***, nhưng thời gian thực thi lâu hơn (0.099s) do phải lặp lại nhiều vòng lặp sâu dần
 
 ## III. Local Search Algorithms
-| Thành phần        | Mô tả                                                                 |
+| **Thành phần**        | **Mô tả**                                                                 |
 |-------------------|------------------------------------------------------------------------|
 | Trạng thái bắt đầu | Ma trận 3x3 gồm 8 số từ 1 đến 8 (không trùng) và 1 ô trống.                         |
 | Trạng thái mục tiêu| Ma trận 3x3 gồm 8 số từ 1 đến 8 (không trùng) và 1 ô trống, sắp xếp đúng thứ tự. |
 | Tập hành động      | Gồm các hành động: UP, DOWN, LEFT, RIGHT (di chuyển ô trống tương ứng). |
 | Trạng thái lân cận | Các trạng thái có thể đạt được từ trạng thái hiện tại bằng 1 bước di chuyển. |
 | Hàm đánh giá       | Hàm đo "độ tốt" của trạng thái, ví dụ như số ô sai vị trí hoặc khoảng cách Manhattan. |
-| Solution (Lời giải)| Một chuỗi các hành động hợp lệ biến trạng thái ban đầu thành trạng thái mục tiêu. |
+| Lời giải| Một chuỗi các hành động hợp lệ biến trạng thái ban đầu thành trạng thái mục tiêu. |
 
 ### 1. Simple Hill Climbing
 |Trạng thái bắt đầu và Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
@@ -183,18 +187,35 @@ Giao diện GUI của dự án được chia làm 4 trang chính:
 |Trạng thái bắt đầu và Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
 | :--- | :---| :---|
 |![Image](https://github.com/user-attachments/assets/5bfa0d34-62fb-4861-8904-b045dc3567dc)|![Image](https://github.com/user-attachments/assets/f629404c-51cf-4575-8a29-900e57af9f50)|<p>Steps: 133</p>|
-### 6. Algorithm Performance Comparison
+### 6. GeneticAlgorithm
+|Trạng thái bắt đầu và Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
+| :--- | :---| :---|
+|![Image](https://github.com/user-attachments/assets/5bfa0d34-62fb-4861-8904-b045dc3567dc)|![Image](https://github.com/user-attachments/assets/15550e90-7288-444e-9e74-8cde99ca11b1)|<p>Không tìm ra lời giải đến trạng thái đích</p>|
+### 7. Algorithm Performance Comparison
 |Biểu đồ so sánh giữa các thuật toán trong nhóm Local Search Algorithms|
 | :--- |
 |![Image](https://github.com/user-attachments/assets/6f4698f5-16d6-491f-a56d-7b7550fef442)|
-#### Simple Hill Climbing, Steepest Ascent Hill Climbing, Stochastic Hill Climbing, Simulated Annealing
-- Các thuất toán nhóm Local Search này áp dụng cho game 8 Puzzle đều không thể tìm ra lời giải vì dễ bị mắc kẹt ở **Local optimum (cực trị địa phương)**. Các thuật này chỉ hoạt động nếu tìm được trạng thái tốt hơn trạng thái hiện tại nếu không thuật toán sẽ dừng lại. 
+#### Simple Hill Climbing, Steepest Ascent Hill Climbing, Stochastic Hill Climbing, Simulated Annealing, GeneticAlgorithm
+- Các thuật toán thuộc nhóm Local Search như trên thường không hiệu quả khi áp dụng cho bài toán 8-Puzzle, do đặc thù không gian trạng thái của bài toán có nhiều điểm cực trị địa phương:
+  - Hill Climbing chỉ tiếp tục nếu tìm được trạng thái tốt hơn trạng thái hiện tại, nên dễ bị kẹt ở các điểm không phải tối ưu toàn cục và không có cơ chế quay lui.
+  - Steepest Ascent Hill Climbing chọn trạng thái tốt nhất trong các hàng xóm, nhưng vẫn dễ rơi vào local optimum.
+  - Stochastic Hill Climbing giảm xác suất mắc kẹt bằng cách chọn ngẫu nhiên một hàng xóm tốt, nhưng vẫn không đảm bảo tìm được lời giải.
+  - Simulated Annealing có thể thoát khỏi local optima nhờ xác suất chấp nhận nghiệm xấu, nhưng hiệu quả phụ thuộc vào lịch làm nguội (cooling schedule).
+  - Genetic Algorithm thường không hiệu quả với bài toán 8-Puzzle do khó thiết kế hàm đánh giá phù hợp và dễ sinh ra cá thể không hợp lệ trong không gian tìm kiếm lớn.
 #### Beam Search
-- Beam Search tìm ra lời giải sau 133 bước, số bước lớn cho thấy lời giải không tối ưu. Dù thời gian thực thi nhanh (0.017s), thuật toán dễ bỏ sót trạng thái tiềm năng do chỉ giữ lại số lượng giới hạn trạng thái tốt nhất ở mỗi bước. Vì vậy, hiệu quả phụ thuộc nhiều vào giá trị hàm heuristic và độ may mắn.
+- Beam Search tìm ra lời giải sau 133 bước, số bước lớn cho thấy lời giải không tối ưu. Dù thời gian thực thi khá nhanh (0.017s), thuật toán dễ bỏ sót trạng thái tiềm năng do chỉ giữ lại số lượng giới hạn trạng thái tốt nhất ở mỗi bước. Vì vậy, hiệu quả phụ thuộc nhiều vào giá trị hàm heuristic và độ may mắn.
 
 ## IV. Searching with Nondeterministic
-- Các thành phần của bài toán tìm kiếm
-  - 
+| **Thành phần**             | **Mô tả**                                                                                   |
+|----------------------------|---------------------------------------------------------------------------------------------|
+| Trạng thái bắt đầu         | Trạng thái khởi đầu có thể quan sát được một phần hoặc đầy đủ                               |
+| Trạng thái mục tiêu        | Trạng thái mong muốn đạt đến            |
+| Tập hành động              | Các hành động có thể thực hiện từ một trạng thái – có thể dẫn đến nhiều kết quả khác nhau   |
+| Mô hình trạng thái | Mỗi hành động không chắc chắn dẫn đến 1 trạng thái, mà có thể dẫn đến **tập các trạng thái kế tiếp** |
+| Kiến thức về môi trường    | Có thể **không đầy đủ** (partial knowledge) → phải tính đến mọi tình huống có thể xảy ra    |
+| Chiến lược tìm kiếm        | Không phải chuỗi hành động, mà là **cây kế hoạch** (plan tree), gồm các hành động và nhánh kết quả |
+| Lời giải                  | Một **kế hoạch điều kiện** (contingency plan): cho biết nên làm gì trong từng tình huống xảy ra |
+
 ### 1. AND OR Search
 |Trạng thái bắt đầu và Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
 | :--- | :---| :---|
@@ -219,24 +240,46 @@ Giao diện GUI của dự án được chia làm 4 trang chính:
 - Thuật toán này cũng random ra 8 trạng thái đầu nhưng khác biệt so với **Searching with No Observation** là có nhìn thấy 1 phần của trạng thái đích nên sau mỗi bước chạy các trạng thái không thỏa mãn phần thông tin nhìn thấy được sẽ bị loại bỏ dẫn đến khả năng tìm ra lời giải tương đối thấp
 
 ## V. Constraint Satisfaction Problem
+| **Thành phần**        | **Mô tả**                                                                                   |
+|-----------------------|---------------------------------------------------------------------------------------------|
+| Biến (Variables)      | Tập hợp các biến cần gán giá trị                                          |
+| Miền giá trị (Domains) | Tập hợp các giá trị có thể gán cho mỗi biến          |
+| Ràng buộc (Constraints) | Các điều kiện liên quan giữa các biến, giới hạn các giá trị có thể gán đồng thời           |
+| Trạng thái             | Một phép gán giá trị cho một số biến (có thể là một phần hoặc toàn bộ biến)                |
+| Lời giải   | Một phép gán giá trị cho tất cả các biến sao cho thoả mãn tất cả các ràng buộc              |
+
 ### 1. Test
+| **Mục đích**                                         | **Kết quả thực thi**                                                                                       |
+|:-----------------------------------------------------|:-----------------------------------------------------------------------------------------------------------|
+| Tạo ra một cấu hình hợp lệ cho bảng 8-puzzle bằng cách gán các số từ 0-8 vào 9 ô sao cho mỗi số chỉ xuất hiện một lần | Một trạng thái hợp lệ của bảng 8-puzzle:<br>[0, 1, 2]<br>[3, 4, 5]<br>[6, 7, 8]                            |
 ### 2. Backtracking
-|Trạng thái bắt đầu và Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
+|Trạng thái bắt đầu và Trạng thái đích|Lời giải|Số bước để tìm
+ra lời giải|
 | :--- | :---| :---|
 |![Image](https://github.com/user-attachments/assets/5bfa0d34-62fb-4861-8904-b045dc3567dc)|![Image](https://github.com/user-attachments/assets/a02cf679-d815-4b9f-85f5-f40afd25fef0)|<p>Steps: 31</p>|
 ### 3. AC-3
+| **Mục đích** | **Kết quả thực thi** |
+|:-------------|:----------------------|
+| Đảm bảo tính nhất quán cung (arc consistency) giữa các biến trong bài toán 8-puzzle, kiểm tra và loại bỏ các giá trị không thỏa mãn ràng buộc từ miền giá trị (domain) của các biến | Miền giá trị ban đầu:<br>X0: [1]<br>X1: [3]<br>X2: [5]<br>X3: [1, 2, 3, 4, 5, 6, 7, 8]<br>X4: [1, 2, 3, 4, 5, 6, 7, 8]<br>X5: [1, 2, 3, 4, 5, 6, 7, 8]<br>X6: [1, 2, 3, 4, 5, 6, 7, 8]<br>X7: [1, 2, 3, 4, 5, 6, 7, 8]<br>X8: [1, 2, 3, 4, 5, 6, 7, 8]<br><br>Kết quả thuật toán AC-3:<br>X0: [1]<br>X1: [3]<br>X2: [5]<br>X3: [2, 4, 6, 7, 8]<br>X4: [2, 4, 6, 7, 8]<br>X5: [2, 4, 6, 7, 8]<br>X6: [2, 4, 6, 7, 8]<br>X7: [2, 4, 6, 7, 8]<br>X8: [2, 4, 6, 7, 8] |
+### 4. Algorithm Performance Comparison
+|Biểu đồ so sánh giữa các thuật toán trong nhóm Constraint Satisfaction Problem|
+| :--- |
+|![Image](https://github.com/user-attachments/assets/06e8fd3f-2b8f-4ebb-a28c-98ce8f550974)|
+- Thuật toán Backtracking tìm ra lời giải với số bước không quá lớn (31 bước), nhưng thời gian thực thi là không tối ưu cho những trường hợp phức tạp do tính chất kiểm tra đệ quy và loại bỏ trạng thái.
 
 ## VI. Reinforcement Learning
-- Các thành phần của bài toán tìm kiếm
-  - Trạng thái bắt đầu: Ma trận 3x3 với 8 số từ 1-8 và 1 ô trống
-  - Trạng thái mục tiêu: Ma trận 3x3 với 8 số từ 1-8 không trùng lặp và 1 ô trống
-  - Tập hành động: Gồm các hành động: UP, DOWN, LEFT, RIGHT (di chuyển ô trống tương ứng).
-  - Hàm phần thưởng: Hàm xác định phần thưởng nếu đi được đến trạng thái đích hoặc bị phạt nếu đi sai
-  - Hệ số chiết khấu (γ)
-  - Tốc độ học (α)
-  - Q_table: Lưu giá trị hành động (Q(s, a)) 
-  - Chính sách hành động (Policy): Sử dụng epsilon-greedy để cân bằng giữa khai thác và khám phá
-  - Solution: Một solution (lời giải) là một chuỗi các hành động hợp lệ biến trạng thái ban đầu thành trạng thái mục tiêu.
+| **Thành phần**             | **Mô tả**                                                                                   |
+|----------------------------|---------------------------------------------------------------------------------------------|
+| Trạng thái bắt đầu         | Ma trận 3x3 với 8 số từ 1 đến 8 và 1 ô trống                                                |
+| Trạng thái mục tiêu        | Ma trận 3x3 với 8 số từ 1 đến 8 không trùng lặp và 1 ô trống, sắp xếp đúng thứ tự.                                |
+| Tập hành động              | Gồm các hành động: UP, DOWN, LEFT, RIGHT (di chuyển ô trống tương ứng)                     |
+| Hàm phần thưởng            | Hàm xác định phần thưởng nếu đến trạng thái đích và bị phạt nếu đi sai    |
+| Hệ số chiết khấu (γ)       | Hệ số chiết khấu giá trị phần thưởng tương lai, giúp cân bằng giữa hiện tại và tương lai   |
+| Tốc độ học (α)             | Xác định mức độ cập nhật giá trị Q(s, a) sau mỗi hành động                                  |
+| Q_table                    | Bảng lưu giá trị Q(s, a) cho mỗi cặp trạng thái và hành động                                |
+| Chính sách hành động       | Sử dụng epsilon-greedy để cân bằng giữa khai thác (exploit) và khám phá (explore)          |
+| Lời giải                   | Một chuỗi các hành động hợp lệ biến trạng thái ban đầu thành trạng thái mục tiêu           |
+
 ### 1. Q-Learning
 |Trạng thái bắt đầu và Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
 |Trạng thái bắt đầu và Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
