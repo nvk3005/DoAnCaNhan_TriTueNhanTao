@@ -51,6 +51,7 @@ class RESULT(QFrame, Ui_Frame):
         self.btn_StochchaticHC.clicked.connect(self.StochasticHC)
         self.btn_Sa.clicked.connect(self.SimulatedAnnealing)
         self.btn_Bs.clicked.connect(self.BeamSearch)
+        self.btn_Ga.clicked.connect(self.GeneticAlgorithm)
         self.btn_AoStar.clicked.connect(lambda: self.AOStar(30))
         self.btn_Test.clicked.connect(self.Test)
         self.btn_Backtracking.clicked.connect(lambda: self.Backtracking(Node(self.start_state), visited=set()))
@@ -442,64 +443,118 @@ class RESULT(QFrame, Ui_Frame):
             neighbors_beam.sort(key=lambda x: x.h)
             beam_list = neighbors_beam[:beam_width]
 
-    def AOStar(self, max_depth=30):
-        self.lbl_title.setText("AO*")
-        start = time.perf_counter()
-        visited = {}
+    def GeneticAlgorithm(self):
+        self.lbl_title.setText("Genetic Algorithm")
+        # Các tham số
+        population_size = 100
+        generations = 50
+        mutation_rate = 0.2
+        elite_size = 10
 
-        def OR_Search(state: list, path: list, depth: int):
-            """
-            Thực hiện tìm kiếm OR - tìm một trạng thái tiếp theo thành công
-            """
-            t_state = tuple(map(tuple, state))
-            if state == self.destination_state:
-                # Nếu tìm thấy trạng thái đích, trả về đường đi
-                end = time.perf_counter()
-                self.execution_times["AO*"] = end - start
-                return path + [state]
-            if state in path or depth > max_depth:
-                return None
-            if t_state in visited and visited[t_state] is not None:
-                return visited[t_state]
-            neighbors = self.generate_states(state)
-            if not neighbors:
-                visited[t_state] = None
-                return None         
-            # Thử từng trạng thái kế tiếp cho đến khi tìm được đường đi thành công (OR)
-            for neighbor in neighbors:
-                result = AND_Search([neighbor], path + [state], depth + 1)
-                if result is not None:
-                    visited[t_state] = result  # Lưu result vào visited để sử dụng sau này
-                    return result
-            # Không tìm thấy đường đi thành công
-            visited[t_state] = None
-            return None
+        def calculate_fitness(individual):
+            """Tính độ thích nghi của một cá thể"""
+            h = 0
+            for i in range(3):
+                for j in range(3):
+                    if individual[i][j] != '':
+                        # Convert string to int before subtraction
+                        value = int(individual[i][j])
+                        goal_i = (value - 1) // 3
+                        goal_j = (value - 1) % 3
+                        h += abs(i - goal_i) + abs(j - goal_j)
+            return 1 / (h + 1)  # Đảo ngược để có giá trị cao hơn cho giải pháp tốt
+
+        def create_individual():
+            """Tạo một cá thể ngẫu nhiên"""
+            current = copy.deepcopy(self.start_state)
+            moves = random.randint(10, 30)
+            for _ in range(moves):
+                next_states = self.generate_states(current)
+                if next_states:
+                    current = random.choice(next_states)
+            return current
+
+        def create_initial_population():
+            """Khởi tạo quần thể ban đầu"""
+            population = [copy.deepcopy(self.start_state)]
+            while len(population) < population_size:
+                individual = create_individual()
+                population.append(individual)
+            return population
+
+        def selection(population, fitness_scores):
+            """Chọn lọc cá thể cho thế hệ tiếp theo"""
+            sorted_pop = [x for _, x in sorted(zip(fitness_scores, population), 
+                                            key=lambda pair: pair[0], reverse=True)]
+            elite = sorted_pop[:elite_size]
+            selected = []
+            fitness_sum = sum(fitness_scores)
+            if fitness_sum == 0:
+                return random.sample(population, population_size)
+            probabilities = [f/fitness_sum for f in fitness_scores]
+            while len(selected) + len(elite) < population_size:
+                selected.append(random.choices(population, weights=probabilities, k=1)[0])
+            return elite + selected
+
+        def crossover(parent1, parent2):
+            """Lai ghép hai cá thể cha mẹ"""
+            child = copy.deepcopy(parent1)
+            moves = random.randint(3, 8)
+            current = copy.deepcopy(child)
+            for _ in range(moves):
+                next_states = self.generate_states(current)
+                if next_states:
+                    current = random.choice(next_states)
+            return current
+
+        def mutate(individual):
+            """Đột biến một cá thể"""
+            if random.random() < mutation_rate:
+                mutated = copy.deepcopy(individual)
+                moves = random.randint(1, 3)
+                for _ in range(moves):
+                    next_states = self.generate_states(mutated)
+                    if next_states:
+                        mutated = random.choice(next_states)
+                return mutated
+            return individual
+
+        def create_next_generation(population, fitness_scores):
+            """Tạo thế hệ tiếp theo"""
+            selected = selection(population, fitness_scores)
+            next_gen = []
+            sorted_pop = [x for _, x in sorted(zip(fitness_scores, population), 
+                                            key=lambda pair: pair[0], reverse=True)]
+            next_gen.extend(sorted_pop[:elite_size])
+            while len(next_gen) < population_size:
+                parent1 = random.choice(selected)
+                parent2 = random.choice(selected)
+                child = crossover(parent1, parent2)
+                child = mutate(child)
+                next_gen.append(child)    
+            return next_gen
+
+        # Main algorithm
+        start_time = time.perf_counter()
+        current_population = create_initial_population()
         
-        def AND_Search(states, path, depth):
-            """
-            Thực hiện tìm kiếm AND - tất cả các trạng thái phải thành công
-            """
-            # Trường hợp cơ sở: không còn trạng thái nào cần kiểm tra
-            if not states:
-                return path 
-            full_path = path
-            # Mỗi trạng thái trong danh sách phải thành công (AND)
-            for state in states:
-                result = OR_Search(state, full_path, depth)
-                if result is None:
-                    return None
-                full_path = result
-            return full_path
+        for generation in range(generations):
+            fitness_scores = [calculate_fitness(individual) for individual in current_population]
+            best_fitness = max(fitness_scores)
+            best_index = fitness_scores.index(best_fitness)
+            best_individual = current_population[best_index]
+            
+            if best_individual == self.destination_state:
+                end_time = time.perf_counter()
+                self.execution_times["GeneticAlgorithm"] = end_time - start_time
+                self.result = [best_individual]
+                self.compare_algorithms["GeneticAlgorithm"] = 1
+                return self.Show()
+                
+            current_population = create_next_generation(current_population, fitness_scores)
         
-        # Bắt đầu tìm kiếm từ trạng thái khởi đầu
-        result = OR_Search(self.start_state, [], 0)
-        if result:
-            self.result = result
-            self.compare_algorithms["AO*"] = len(result)
-            return self.Show()
-        else:
-            messagebox.showinfo("Thông báo", "Không tìm thấy lời giải bằng AO*")
-            return None
+        messagebox.showinfo("Thông báo", "Không tìm thấy lời giải bằng Genetic Algorithm")
+        return None
 
     def Test(self):
         pass
@@ -548,6 +603,7 @@ class RESULT(QFrame, Ui_Frame):
         moves = [(-1, 0), (1, 0), (0, -1), (0, 1)]
 
         # Hàm chuyển đổi trạng thái từ list sang string
+
         def convert_list_to_string(state):
             return ''.join(state[i][j] if state[i][j] != '' else '0' 
                 for i in range(3) 
