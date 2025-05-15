@@ -555,6 +555,65 @@ class RESULT(QFrame, Ui_Frame):
         
         messagebox.showinfo("Thông báo", "Không tìm thấy lời giải bằng Genetic Algorithm")
         return None
+    
+    def AOStar(self, max_depth=30):
+        self.lbl_title.setText("AO*")
+        start = time.perf_counter()
+        visited = {}
+
+        def OR_Search(state: list, path: list, depth: int):
+            """
+            Thực hiện tìm kiếm OR - tìm một trạng thái tiếp theo thành công
+            """
+            t_state = tuple(map(tuple, state))
+            if state == self.destination_state:
+                # Nếu tìm thấy trạng thái đích, trả về đường đi
+                end = time.perf_counter()
+                self.execution_times["AO*"] = end - start
+                return path + [state]
+            if state in path or depth > max_depth:
+                return None
+            if t_state in visited and visited[t_state] is not None:
+                return visited[t_state]
+            neighbors = self.generate_states(state)
+            if not neighbors:
+                visited[t_state] = None
+                return None         
+            # Thử từng trạng thái kế tiếp cho đến khi tìm được đường đi thành công (OR)
+            for neighbor in neighbors:
+                result = AND_Search([neighbor], path + [state], depth + 1)
+                if result is not None:
+                    visited[t_state] = result  # Lưu result vào visited để sử dụng sau này
+                    return result
+            # Không tìm thấy đường đi thành công
+            visited[t_state] = None
+            return None
+        
+        def AND_Search(states, path, depth):
+            """
+            Thực hiện tìm kiếm AND - tất cả các trạng thái phải thành công
+            """
+            # Trường hợp cơ sở: không còn trạng thái nào cần kiểm tra
+            if not states:
+                return path 
+            full_path = path
+            # Mỗi trạng thái trong danh sách phải thành công (AND)
+            for state in states:
+                result = OR_Search(state, full_path, depth)
+                if result is None:
+                    return None
+                full_path = result
+            return full_path
+        
+        # Bắt đầu tìm kiếm từ trạng thái khởi đầu
+        result = OR_Search(self.start_state, [], 0)
+        if result:
+            self.result = result
+            self.compare_algorithms["AO*"] = len(result)
+            return self.Show()
+        else:
+            messagebox.showinfo("Thông báo", "Không tìm thấy lời giải bằng AO*")
+            return None
 
     def Test(self):
         def is_consistent(value, assignment):
@@ -593,13 +652,20 @@ class RESULT(QFrame, Ui_Frame):
         for i in range(3):
             print([solution[f'X{3*i + j}'] for j in range(3)])
 
-        
+    
+    isStart = False
+    _start_time = 0
     def Backtracking(self, current_node, visited, max_depth=30):
         self.lbl_title.setText("Backtracking")
-        start = time.perf_counter()
+        
+        if not self.isStart:
+            self.isStart = True
+            self._start_time = time.perf_counter()
+
+        # Nếu đạt trạng thái đích
         if current_node.current_state == self.destination_state:
             end = time.perf_counter()
-            self.execution_times["Backtracking"] = end - start
+            self.execution_times["Backtracking"] = end - self._start_time
             self.result = current_node.Path()
             self.compare_algorithms["Backtracking"] = len(self.result)
             return True, self.Show()
@@ -611,10 +677,13 @@ class RESULT(QFrame, Ui_Frame):
             next_tuple = tuple(map(tuple, new_state))
             if next_tuple not in visited:
                 next_node = Node(new_state, current_node, depth=current_node.depth + 1)
-                if self.Backtracking(next_node, visited, max_depth):
+                result = self.Backtracking(next_node, visited, max_depth)
+                if result:
                     return True
+
         visited.remove(state_tuple)
         return False
+
     
     def AC3(self):
         from collections import deque
@@ -663,6 +732,12 @@ class RESULT(QFrame, Ui_Frame):
         # Tạo danh sách các biến lân cận (mọi biến khác đều là hàng xóm)
         neighbors = {var: [v for v in variables if v != var] for var in variables}
         domains_copy = copy.deepcopy(domains)
+
+        # In ra miền giá trị ban đầu
+        print("Miền giá trị ban đầu:")
+        for var in sorted(domains_copy):
+            print(f"{var}: {domains_copy[var]}")
+        
         # Chạy thuật toán AC-3
         has_result = ac3(domains_copy, neighbors)
         if has_result:
