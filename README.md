@@ -7,8 +7,8 @@
 2. [Các công nghệ dùng trong dự án](#%EF%B8%8F-các-công-nghệ-dùng-trong-dự-án)
 3. [Cách thức hoạt động của dự án](#%EF%B8%8F-cách-thức-hoạt-động-của-dự-án)
 4. [Cách chạy dự án](#%EF%B8%8F-cách-để-chạy-dự-án)
-5. [Các thuật toán được sử dụng trong dự án](#-các-thuật-toán-được-sử-dụng-trong-dự-án)
-6. [Kết luận](#-kết-luận)
+5. [Mục lục](#-mục-lục)
+
 
 ## 🧠 Giới thiệu tổng quan về dự án
 Dự án được xây dựng nhằm mục đích nghiên cứu, đánh giá hiệu suất của các thuật toán thuộc các nhóm thuật toán khác nhau như Uninformed Search Algorithms, Informed Search Algorithms, Local Search Algorithms, Searching with Nondeterministic, Constraint Satisfaction Problem, Reinforcement Learning.
@@ -36,8 +36,9 @@ Giao diện GUI của dự án được chia làm 4 trang chính:
    ```bash
    python Main.py
    ```
-## 📊 Các thuật toán được sử dụng trong dự án
-
+## 📊 Mục lục
+### [A. Mục tiêu]
+### [B. Nội dung] 
 - [I. Uninformed Search Algorithms](#i-uninformed-search-algorithms)
   - [1. Breadth-First Search](#1-breadth-first-search)
   - [2. Depth-First Search](#2-depth-first-search)
@@ -69,7 +70,20 @@ Giao diện GUI của dự án được chia làm 4 trang chính:
 - [VI. Reinforcement Learning](vi-reinforcement-learning)
   - [1. Q-Learning](#1-q-learning)
   - [2. Algorithm Performance Comparison](#2-algorithm-performance-comparison)
+### [C. Kết luận]
 
+## A. Mục tiêu
+  - Minh họa trực quan cách hoạt động của các thuật toán tìm kiếm và học tăng cường thông qua trò chơi 8-Puzzle.
+  - Phân tích hiệu năng của từng thuật toán trong các nhóm:
+    - Tìm kiếm không thông tin (Uninformed Search),
+    - Tìm kiếm có thông tin (Informed Search),
+    - Tìm kiếm cục bộ (Local Search),
+    - Tìm kiếm trong môi trường không xác định (Nondeterministic Search),
+    - Bài toán thỏa ràng ràng buộc (Constraint Satisfaction Problem),
+    -Học tăng cường (Reinforcement Learning).
+  - So sánh và đánh giá sự khác biệt về tốc độ, độ tối ưu và khả năng tìm ra lời giải giữa các thuật toán.
+  - Cung cấp giao diện người dùng trực quan giúp tương tác với bài toán và quan sát quá trình giải quyết của từng thuật toán.
+  - Nắm vững hơn các hiểu biết lý thuyết bằng cách thực hành và áp dụng vào bài toán cụ thể.
 ## I. Uninformed Search Algorithms
 - Các thành phần của bài toán tìm kiếm
   - Trạng thái bắt đầu: Ma trận 3x3 với 8 số từ 1-8 không trùng lặp và 1 ô trống
@@ -229,6 +243,6 @@ Giao diện GUI của dự án được chia làm 4 trang chính:
 #### Q-Learning
 - Thuật toán Q-Learning không thể tìm ra lời giải cho game 8 Puzzle với trạng thái đã khởi tạo điều này có thể do 1 số lý do như chưa đủ số vòng lặp học (episodes). Số lượng trạng thái của game lớn nên có thể agent chưa từng đi con đường đó trong quá trình training → Q-table có thể không đủ thông tin để tìm được đường đi.
 
-## ✅ Kết luận
-### Thông qua quá trình thực hiện dự án áp dụng các thuật toán giải bài toán 8 Puzzle, tôi đã có cơ hội ôn tập và hệ thống lại những kiến thức đã được học trên lớp một cách hiệu quả. Việc trực tiếp triển khai và theo dõi quá trình hoạt động của từng thuật toán không chỉ giúp tôi nắm vững cách cài đặt mà còn hiểu sâu hơn về cơ chế hoạt động của chúng. Đặc biệt, dự án đã giúp tôi nhận ra rõ ràng những ưu điểm và hạn chế của từng thuật toán, từ đó rút ra được bài học kinh nghiệm trong việc lựa chọn và áp dụng thuật toán phù hợp cho từng bài toán cụ thể.
+## Kết luận
+  -Thông qua quá trình thực hiện dự án áp dụng các thuật toán giải bài toán 8 Puzzle, tôi đã có cơ hội ôn tập và hệ thống lại những kiến thức đã được học trên lớp một cách hiệu quả. Việc trực tiếp triển khai và theo dõi quá trình hoạt động của từng thuật toán không chỉ giúp tôi nắm vững cách cài đặt mà còn hiểu sâu hơn về cơ chế hoạt động của chúng. Đặc biệt, dự án đã giúp tôi nhận ra rõ ràng những ưu điểm và hạn chế của từng thuật toán, từ đó rút ra được bài học kinh nghiệm trong việc lựa chọn và áp dụng thuật toán phù hợp cho từng bài toán cụ thể.
 
