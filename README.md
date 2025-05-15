@@ -253,8 +253,7 @@ Giao diện GUI của dự án được chia làm 4 trang chính:
 |:-----------------------------------------------------|:-----------------------------------------------------------------------------------------------------------|
 | Tạo ra một cấu hình hợp lệ cho bảng 8-puzzle bằng cách gán các số từ 0-8 vào 9 ô sao cho mỗi số chỉ xuất hiện một lần | Một trạng thái hợp lệ của bảng 8-puzzle:<br>[0, 1, 2]<br>[3, 4, 5]<br>[6, 7, 8]                            |
 ### 2. Backtracking
-|Trạng thái bắt đầu và Trạng thái đích|Lời giải|Số bước để tìm
-ra lời giải|
+|Trạng thái bắt đầu và Trạng thái đích|Lời giải|Số bước để tìm ra lời giải|
 | :--- | :---| :---|
 |![Image](https://github.com/user-attachments/assets/5bfa0d34-62fb-4861-8904-b045dc3567dc)|![Image](https://github.com/user-attachments/assets/a02cf679-d815-4b9f-85f5-f40afd25fef0)|<p>Steps: 31</p>|
 ### 3. AC-3
