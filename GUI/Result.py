@@ -557,7 +557,42 @@ class RESULT(QFrame, Ui_Frame):
         return None
 
     def Test(self):
-        pass
+        def is_consistent(value, assignment):
+            # Kiểm tra xem value đã xuất hiện ở biến nào khác chưa
+            for v in assignment.values():
+                if v == value:
+                    return False
+            return True
+
+        def backtracking(variables, domains, assignment={}):
+            if len(assignment) == len(variables):
+                return assignment  # Đã gán hết biến
+
+            unassigned_vars = [v for v in variables if v not in assignment]
+            var = unassigned_vars[0]
+
+            for value in domains[var]:
+                if is_consistent(value, assignment):
+                    assignment[var] = value
+                    result = backtracking(variables, domains, assignment)
+                    if result:
+                        return result
+                    assignment.pop(var)
+            return None
+
+        # Biến là vị trí trên bảng 3x3
+        variables = [f'X{i}' for i in range(9)]
+
+        # Miền giá trị mỗi vị trí là các số 0-8 
+        domains = {var: list(range(9)) for var in variables}
+
+        # Bắt đầu thử gán
+        solution = backtracking(variables, domains)
+
+        print("Một trạng thái hợp lệ của bảng 8-puzzle:")
+        for i in range(3):
+            print([solution[f'X{3*i + j}'] for j in range(3)])
+
         
     def Backtracking(self, current_node, visited, max_depth=30):
         self.lbl_title.setText("Backtracking")
@@ -580,9 +615,63 @@ class RESULT(QFrame, Ui_Frame):
                     return True
         visited.remove(state_tuple)
         return False
-
+    
     def AC3(self):
-        pass
+        from collections import deque
+        import copy
+        # Ràng buộc
+        def different_constraint(x: int, y: int):
+            return x != y
+        
+        # Hàm revise: Xét và điều chỉnh domain của Xi dựa vào ràng buộc với Xj
+        def revise(domains: dict, Xi, Xj):
+            revised = False
+            for x in domains[Xi][:]:  
+                if all(not different_constraint(x, y) for y in domains[Xj]):
+                    domains[Xi].remove(x)
+                    revised = True
+            return revised
+
+        # Thuật toán AC-3
+        def ac3(domains: dict, neighbors: dict):
+            # Tạo hàng đợi ban đầu chứa tất cả các cặp (Xi, Xj)
+            queue = deque([(Xi, Xj) for Xi in domains for Xj in neighbors[Xi]])
+
+            while queue:
+                Xi, Xj = queue.popleft()
+                if revise(domains, Xi, Xj):
+                    # Nếu domain của Xi bị rỗng → không còn giá trị hợp lệ → không thể giải
+                    if not domains[Xi]:
+                        return False
+                    # Nếu Xi bị thay đổi, ta cần kiểm tra lại các biến Xk có liên quan đến Xi
+                    for Xk in neighbors[Xi]:
+                        if Xk != Xj:
+                            queue.append((Xk, Xi))
+            return True
+
+        # Khởi tạo danh sách biến (X0 đến X8)
+        variables = [f'X{i}' for i in range(9)]
+
+        # Miền giá trị ban đầu: tất cả các biến có thể nhận giá trị từ 1 đến 8
+        domains = {var: list(range(1, 9)) for var in variables}
+
+        # Gán cố định giá trị cho một số biến để kiểm tra AC-3
+        domains['X0'] = [1]
+        domains['X1'] = [3]
+        domains['X2'] = [5]
+
+        # Tạo danh sách các biến lân cận (mọi biến khác đều là hàng xóm)
+        neighbors = {var: [v for v in variables if v != var] for var in variables}
+        domains_copy = copy.deepcopy(domains)
+        # Chạy thuật toán AC-3
+        has_result = ac3(domains_copy, neighbors)
+        if has_result:
+            print("Kết quả thuật toán AC-3:")
+            for var in sorted(domains_copy):
+                print(f"{var}: {domains_copy[var]}")
+        else:
+            print("Không tìm được lời giải hợp lệ (có domain rỗng).")
+
 
     def Q_Learning(self):
         import numpy as np
