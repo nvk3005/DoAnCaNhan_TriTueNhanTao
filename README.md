@@ -21,6 +21,27 @@ dựa trên việc áp dụng để giải quyết một vấn đề cụ thể 
 - Qt Designer (PyQt5)
 
 ## ⚙️ Cách thức hoạt động của dự án
+Cấu trúc chương trình:
+```
+DoAnCaNhan_TriTueNhanTao/
+├── GUI/
+│   ├── Input.py: nhập trạng thái bắt đầu và trạng thái kết thúc
+│   ├── InputForm.ui: file ui xây dựng bằng PyQT5
+│   ├── Result.py: chứa mã nguồn các thuật toán của chương trình và chạy thuật toán ra giao diện
+│   ├── ResultForm.py: file biên dịch từ file ui thành file .py để dùng như một thư viện
+│   ├── ResultForm.ui: file ui xây dựng bằng PyQT5
+│   ├── Search.py: chứa mã nguồn cho 2 thuật toán Searching with No Observation và Searching with Partially Observation
+│   ├── SearchForm.py: file biên dịch từ file ui thành file .py để dùng như một thư viện
+│   ├── SearchForm.ui: file ui xây dựng bằng PyQT5
+│   ├── Steps.py: biểu diễn các bước tìm ra  lời giải của thuật toán
+│   ├── StepsForm.py: file biên dịch từ file ui thành file .py để dùng như một thư viện
+│   ├── StepsForm.ui: file ui xây dựng bằng PyQT5
+├── Main.py: trang chính của chương trình nơi gọi các class và hỗ trợ chuyển đổi qua lại giữa các trang
+├── Node.py: định nghĩa cấu trúc trạng thái và node trong thuật toán
+├── .gitignore
+├── README.md
+```
+
 Giao diện GUI của dự án được chia làm 4 trang chính:
 - Trang Input: Cho phép người dùng nhập trạng thái bắt đầu và trạng thái đích
 - Trang Result: Cho phép người dùng chọn thuật toán muốn áp dụng để tìm ra lời giải cho bài toán
